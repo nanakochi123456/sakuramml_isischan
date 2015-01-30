@@ -2,8 +2,6 @@ ISISちゃん「Give Me Merorin by ISIL48」
 Copyright 2015 @nanakochi123456
 ================
 
-HALEY ('87 旺文社＆ソニーテープ大賞受賞曲)
-
 http://oto.chu.jp/mmlbbs6/post.php?mml_id=1604
 
 http://uta.pw/sakusibbs/post.php?mml_id=147
