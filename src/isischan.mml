@@ -1,0 +1,1135 @@
+// #ISISクソコラグランプリ
+// #ISISちゃん　テーマ曲
+// ギブミーメロリン title by @minamino48
+// by @nanakochi123456
+// 参考歌詞 アイシスちゃんのテーマ @kusakaiza913
+// 動画、添削 by @isisvipper
+
+Tempo 240
+
+Int TIMIDITY=0
+Int VOCALOID=0
+Int EGUITAR=0
+Int BGUITAR=0
+Int PIANO=0
+Int ORGAN=0
+Int SYNTH=0
+Int BASS=0
+Int VOCAL=0
+Int DRUM=0
+Int GAKUHU=0
+Int ALL=0
+
+IF(TIMIDITY=0 || ALL=1) {
+	VOCALOID=1
+	EGUITAR=1
+	BGUITAR=1
+	PIANO=1
+	ORGAN=1
+	SYNTH=1
+	BASS=1
+	VOCAL=1
+	DRUM=1
+}
+
+
+曲名{"Give Me Merorin by ISIL48"}
+作者{"@nanakochi123456"}
+
+IF(TIMIDITY=1 && VOCALOID==1) {
+	System.TimeBase=96
+} ELSE {
+	System.TimeBase=10368
+}
+
+Expression.Frequency(1);
+Modulation.Frequency(1);
+
+#PEDALON={Sub {r16y64,127}}
+#PEDALOFF={r-32 y64,0 r32}
+
+// シンバルのロテート
+Int CYMINIT=0
+Int SNAREINIT=0
+
+Function Snare() {
+	Int CC
+	IF(TIMIDITY=0) {
+		CC=Snare1
+	} ELSE {
+		IF(SNAREINIT=0) {
+			CC=Snare1
+			SNAREINIT=1
+		} ELSE {
+				CC=Snare2
+			SNAREINIT=0
+		}
+	}
+	Result=CC
+}
+
+Function Cymbal() {
+	Int CC
+	IF(CYMINIT=0) {
+		CC=CrashCymbal1
+		CYMINIT=1
+	} ELSE {
+		CC=CrashCymbal2
+		CYMINIT=0
+	}
+	Result=CC
+}
+
+Function Splash() {
+	Int CC
+	IF(CYMINIT=0) {
+		CC=SplashCymbal
+		CYMINIT=1
+	} ELSE {
+		CC=ChineseCymbal
+		CYMINIT=0
+	}
+	Result=CC
+}
+
+
+Function RandV(Int MIN, Int MAX) {
+	Str MML="v"
+	MML=MML+Random(MIN,MAX)
+	MML
+}
+
+Str RMML
+Function RandR(Int MIN, Int MAX) {
+	Str MML
+	IF(NODTM=1) {
+		MML=MML+"r"
+		RMML=RMML+"r"
+		Int VALUE=Random(0,10)
+		IF(VALUE<5) {
+			MML=MML+"-"
+		} ELSE {
+			RMML=RMML+"-"
+		}
+		Str RAND=Random(MIN,MAX)
+		MML=MML+RAND
+		RMML=RMML+RAND
+		MML
+	}
+}
+
+Function SyncR() {
+	Str MML=RMML
+	RMML=""
+	MML
+}
+
+Function BG(Str MML) {
+　　Str BUF=""
+    Str FIRST=""
+　　Str ML=""
+　　Str M
+　　Str R
+    Str FM
+    Int C=0
+
+　　BUF=""
+    R=""
+　　For(Int i=1; MID(MML, i, 1)!=""; i++) {
+　　　　M=MID(MML, i, 1)
+　　　　IF(M="a"||M="b"||M="c"||M="d"||M="e"||M="f"||M="g") {
+		C++
+	  	IF(C<3) {
+			FIRST=ML
+			ML=FM+M
+			FM=""
+		} ELSE {
+	　　　　　　R=R+"r"+Random(144,384)
+　　　　　　　　	BUF=BUF+"Sub" + CHR(123)+R+ML+CHR(125)
+	　　　　　　ML=M
+		}
+　　　　} ELSE {
+		IF(C>0) {
+　　　　　　	ML=ML+M
+		} ELSE {
+			FM=FM+M
+		}
+　　　　}
+　　}
+　　BUF="Sub"+CHR(123)+FIRST+CHR(125)+BUF+"Sub"+CHR(123)+R+ML+CHR(125)+"r"
+　　BUF
+}
+
+// トラックの最初が省略されないようにする
+#INIT={
+	Sub {
+		IF(GAKUHU=0) {
+			@128
+			Expression(1)
+			v1o1c1
+			Expression(127)
+		}
+	}
+}
+
+// テンポ
+TR(1)
+	[163 r1]
+	[32
+		Tempo=Tempo-2
+		r32
+	]
+	Tempo 100
+	r1
+	Tempo 140
+	[6
+		Tempo=Tempo-10
+		r6
+	]
+	r1
+	Tempo 160
+
+// メロディー
+	#u11={
+		l8
+		// さば　くの　オ
+		r4 ee ea4g#^
+		// アシス
+		f#4e4d4.
+		// いの　ちが　や
+		r4 c#c# c#f#4e^
+		//どるも
+		d4c#4<b4r
+		// おひさま
+		a4.a>f#4.e
+		// にちか
+		rrrrr<ab>c#
+		//ーていくのよ
+		drc#<b4aab^2.>
+		r4
+
+		// せんにんの
+		r4 ee ea4g#^
+		// おしえ
+		f#4e4d4.
+		// まも　て ゆ
+		r4 c#c# rf#4e^
+		//ーけば
+		d4c#4<b4r
+		// みんなの
+		a2^a>f#e
+		// にわで
+		rrrr rc#de
+		//なかよく
+		f#2g#2a2b2
+	}
+
+	#u12={
+		//だいちを
+		a2f4fc
+		//   ふみし
+		rrrr rcfa
+		// ていこう
+		g2e4.c^2
+		r2
+		//おいし
+		f2d4.<b^^
+		//　メロン
+		rr rb>df
+		//かじーて
+		e2f2f#4r4g4r4
+
+		//みらいへ
+		a2f4fc
+		//   むかー
+		rrrr rcfa
+		//ーてゆく
+		g4r4a2b2>c2
+		//いのちを
+		d2^c<b>c^2^
+		//つなげ
+		<bab^1
+		r1
+	}
+	#u13={
+		l8
+		// こころを　ひらき
+		aaaa a>f#4e^2
+		// あした
+		r <ef#g#
+		// のための いぽを
+		a16r16aaa a>rf#e^2
+		// つよく
+		r <ab>c#
+		//ふみしめて
+		d4c#<a4f#ar>
+		// いぽまえに
+		drc#<a4f#ar>
+		// すすんでいこ
+		d4c#<a4f#a>c#^4.
+		//ーーお
+		d16c#16<brrr
+
+		// みんなだ　いすき
+		aaaa a>f#4e^2
+		// アイシ
+		r <ef#g#
+		//スちゃんの　ために
+		aaaa a>f#4e^2
+		// きょうも
+		r <ab>c#
+		//いぽずーつ
+		drc#<a4f#ar>
+		//あるいーて
+		d4c#<a4f#ar>
+		//すすんでいこ
+		d4c<a4fa>c^2<
+		//ー
+		b2
+		//よ
+		a1^1
+		[2 r1] 
+	}
+	
+	////////////////
+	#u21={
+		l8
+		// かわいたさ
+		r4 ee ea4g#^
+		// ばくも
+		f#4e4d4.
+		// きみがかな
+		r4 c#c# c#f#4e^
+		//えれば
+		d4c#4<b4r
+		// オアシス
+		a4.a>f#4.e
+		// よどん
+		rrrrr<ab>c#
+		//でいくのよ
+		d4c#<b4a4b^2.>
+		r4
+
+		// あれはてた
+		r4 ee ea4g#^
+		// こやも
+		f#4e4d4.
+		// きみがおど
+		r4 c#c# c#f#4e^
+		//れーば
+		d4c#4<b4r
+		// せきゆが
+		a2^8a>f#e
+		// よどん
+		rrrr rc#de
+		//でいくの
+		f#2g#2a2b2
+	}
+	#u22={
+		//だいちの
+		a2f4fc
+		//   ちから
+		rrrr rcfa
+		// しんじて
+		g2e4ec^2
+		r2
+		//よどんだ
+		f2d4d<b^^
+		//　せきゆ
+		rr rb>df
+		//わけあて
+		e2f2f#4r4g2
+
+		//みらいへ
+		a2f4fc
+		//   むかー
+		rrrr rcfa
+		//ーてゆく
+		g4r4a2b2>c2
+		//へいわの
+		d2^c<b>c^2^
+		//ために
+		<bab^1
+		r1
+
+	}
+	#u23={
+		l8
+		// もてるナイフで
+		araa aa>f#e^2
+		// まるい
+		r <ef#g#
+		// メロンを わけあお
+		aaaa aa>f#e^2
+		// かわい
+		r <ab>c#
+		//たのどーを
+		d4c#<a4f#ar>
+		// あまさーで
+		d4c#<a4f#ar>
+		// よどませてゆ
+		d4c#<a4f#a>c#^4.
+		//くーお
+		d16c#16<brrr
+
+		// みんなだ　いすき
+		aaaa a>f#4e^2
+		// アイシ
+		r <ef#g#
+		//スちゃんの　ために
+		aaaa a>f#4e^2
+		// きょうも
+		r <ab>c#
+		//いぽずーつ
+		drc#<a4f#ar>
+		//あるいーて
+		d4c#<a4f#ar>
+		//すすんでいこ
+		d4c<a4fa>c^2<
+		//ー
+		b2
+		//よ
+		a1r1
+	}
+
+	#u33={
+		l8
+		// ななじゅう　にじかん
+		aaaa aa>f#e^4.r
+		// いないに
+		<e f f# g#
+		// メロンを よこせ
+		aaaa a>f#4e^4.r
+		// まるい
+		r <ab>c#
+		//メロンーを
+		d4c#<a4f#ar>
+		// ナイフーで
+		d4c#<a4f#ar>
+		// きてわけあお
+		drc#<a4f#a>c#^4.
+		//ーーよ
+		d16c#16<brrr
+
+		// ほぺがたれてる
+		araa aa>f#e^4.r
+		// メロンの
+		<eff#g#
+		//あまさで　ほてて
+		aaaa a>f#4e^4.r
+		// みんな
+		r <ab>c#
+		//えがおーが
+		d4c#<a4f#ar>
+		//はじけてる
+		d4c#<a4f#ar>
+		// しあわせそー
+		d4c<a4fa>c^4.
+		//ーーに
+		d16c16<brrr
+	}
+
+	#u43={
+		l8
+		// みんなでなかよく
+		aaaa aa>f#e^4.r
+		// おおきな
+		<e f f# g#
+		// メロンを たべよお
+		aaaa aa>f#e^4.r
+		// まるい
+		r <ab>c#
+		//メロンーを
+		d4c#<a4f#ar>
+		// ナイフーで
+		d4c#<a4f#ar>
+		// きてわけあお
+		drc#<a4f#a>c#^4.
+		//ーーよ
+		d16c#16<brrr
+
+		// みんなだ　いすき
+		aaaa a>f#4e^2
+		// アイシ
+		r <ef#g#
+		//スちゃんの　ために
+		aaaa a>f#4e^2
+		// きょうも
+		r <ab>c#
+		//いぽずーつ
+		drc#<a4f#ar>
+		//あるいーて
+		d4c#<a4f#ar>
+		//すすんでいこ
+		d4c<a4fa>c^2<
+		//ー
+		b2
+		//よ
+		a1r1
+	}
+
+IF(VOCALOID=1) {
+	// IA
+	TR(11)
+		#INIT
+		o5
+		q97
+		@(AltoSax)
+		v127
+		[14 r1]
+
+		Expression(127)
+		#u11
+		Expression(127)
+		#u12
+		Expression(107)
+		#u13
+
+		[32 r1]
+		Expression(107)
+		#u23
+		[16 r1]
+		[16 r1]
+		Expression(107)
+		#u43
+
+	// ささら
+	TR(12)
+		#INIT
+		o5
+		q97
+		@(AltoSax)
+		v127
+		[14 r1]
+
+		[32 r1]
+		Expression(110)
+		#u13
+		Expression(127)
+		#u21
+		Expression(127)
+		#u22
+		Expression(110)
+		#u23
+		[16 r1]
+		[16 r1]
+		Expression(110)
+		#u43
+
+	// みく
+	TR(15)
+		#INIT
+		q97
+		@(Violin)
+		v127
+		o5
+		[14 r1]
+		[32 r1]
+		Expression(115)
+		#u13
+		[32 r1]
+		Expression(115)
+		#u23
+		[16 r1]
+		Expression(127)
+		#u33
+		Expression(107)
+		#u43
+
+	// がっくぽいど
+	IF(0){
+	TR(16)
+		#INIT
+		q98
+		@(Trombone)
+		v127
+		o4
+		[14 r1]
+		[32 r1]
+		#u13
+		[32 r1]
+		#u23
+		[16 r1]
+		#u33
+		#u43
+	}
+}
+
+// サビのギター
+
+IF(EGUITAR=1) {
+	TR(2)
+		#INIT
+		[114 r1]
+		@(OverdrivenGuitar)
+		PitchBendSensitivity(1)
+		o7q99v127
+		l6
+		r [p.onTime(0,64,!12)c] p.onTime(50,64,!4)l2^6 BG(<f>c)
+		l6
+		<b>cd<bg
+		g2^gb-
+		a2efg
+		f2fga
+		g2d2
+		e2^2>
+		r2r2
+		r6[p.onTime(0,64,!12) BG(<f>c)] l2^6 BG(<f>c)
+		l6<b>cd<bg>
+		e2d2
+		c2<ab>c
+		d2def
+		e2c2
+		'<f1^1>d1^1'
+		Sub{<a1g#1>}e1^1
+}
+
+// ピアノ
+
+IF(PIANO=1) {
+	TR(3)
+		o5
+		l2^8 BG(f#a>c#<) f#8a8>c#8<
+		l2.BG(eg#b)r4
+		l2^8 BG(eg#b) e8g#8b8
+		l2.BG(c#f#a)r4
+		l8 BG(<b>df#) ef# l4 BG(c#eg#) l8 f#g# l4 BG(df#a)
+		l8g#a l4 BG(d#f#b) l8 >c#d# < l8^1^1 BG(ab>e)<
+		l1^2. BG(g#b>e<) r4
+		l1^2. BG(ea>c#<)r4
+}
+
+// オルガン
+
+#chord11={
+	l1
+	l2.	BG(c#ea)
+	l1^4	BG(<b>eg#)
+	l2.	BG(c#f#a)
+	l1^4	BG(c#eg#)
+	l2 BG(df#a) l4.BG(df#a) l8^1 BG(c#ea)
+	l4 BG(df#a) l8 BG(c#eg#) BG(df#a) r BG(df#a) r l1^8 BG(eg#b)
+}
+
+#chord12={
+	l1
+	l2.	BG(c#ea)
+	l1^4	BG(<b>eg#)
+	l2.	BG(c#f#a)
+	l1^4	BG(c#eg#)
+	l2 BG(df#a) l4.BG(df#a) l8^1 BG(c#ea)
+	l2 BG(df#a) BG(c#eg#) BG(df#a) BG(eg#b)
+}
+#chord21={
+	l1^1 BG(cfa)
+	l1 BG(<b>eg) BG(cea)
+	l1 BG(<b>dfa) BG(<b>deg#)
+	Sub{l1^1BG(ce)}g2a2b2>c2<
+
+	l1^1 BG(cfa)
+	l1 BG(<b>eg) BG(cea)
+	l1^1 BG(dfa)
+	BG(<b>eg#)
+}
+
+#chord31={
+	[
+		l4.#g1 BG(c#ea) #g2 l8 BG(c#ea) r  BG(c#ea) r BG(<b>eg#)
+		r4 l2. #g1 BG(<b>eg#)
+		l4.BG(c#f#a) #g2 l8 BG(c#f#a) r  BG(c#f#a) r BG(c#eg#)
+		r4 l2. #g1 BG(c#eg#)
+
+		l4.BG(df#a) #g2 l8 BG(df#a) r #g1 l4. BG(df#a)
+		l4.BG(c#ea) #g2 l8 BG(c#ea) r #g1 l4. BG(c#ea)
+		:
+		l4.BG(df#a) #g2 l8 BG(df#a) r  BG(df#a) r #g1 l2^8 BG(df#a)
+		l2 BG(eg#b)
+	]
+	l4.BG(cfa) #g2 l8 BG(cfa) r  BG(cfa) r #g1 l2^8 BG(cfa)
+	l2 BG(dgb)
+}
+
+#chord52={
+	l1
+	BG(cfa)
+	BG(dgb)
+	BG(eg>d<)
+	BG(ea>c<)
+	BG(fa>c<)
+	BG(gb>d<)
+	Sub{l1^1 BG(eg)}>c2d2d#2e2<
+	l1
+	BG(cfa)
+	BG(dgb)
+	l2 BG(eg>c<) BG(dg#b)
+	l1 BG(cea)
+	l1^1 BG(dfa)
+	l1^1 BG(<b>dfa)
+	l1 BG(eab)BG(eg#b)
+}
+
+#chord61={
+	Expression.onTime(127,110,!1)
+	'd1e1a1>d1<'
+	Sub{Expression.onTime(127,100,!1.) r1.Expression.onTime(100,0,!4)}
+	'c#1^1e1^1a1^1>c#1^1<'
+}
+
+IF(ORGAN=1) {
+	TR(6)
+		#INIT
+		v70
+		[14 r1]
+		o6q100
+		@(RockOrgan)
+		#chord11
+		#chord12
+
+		#chord21
+
+		#chord31
+		l1^1^1^1 BG(ea>c#<)
+
+		#chord11
+		#chord12
+		#chord21
+		#chord31
+		[34 r1]
+		o6 #g1
+		#chord31
+		#chord61
+}
+
+// ストリング
+
+#chord32={
+	[
+		o5
+		l1
+		l2.^8 BG(c#ea)
+		l8^1  BG(<b>eg#)
+		l2.^8 BG(c#f#a)
+		l8^1  BG(c#eg#)
+		l1 BG(df#a)
+		l1 BG(c#ea)
+		:
+		BG(df#a)
+		l2 BG(df#a) BG(eg#b)
+	]
+	BG(cfa)
+	l2 BG(cfa) BG(dgb)
+}
+
+IF(SYNTH=1) {
+	TR(5)
+		#INIT
+		v70
+		@(Strings1)
+		[4 r1]
+		o6q100
+		Sub{f#1^1^1^1}r1r1a1^1
+		'e1^1g#1^1b1^1'
+		Sub{r1r1Expression.onTime(127,60,!1^2.)}
+		l1'>c#^^^2.<e^^^2.a^^^2.' r4
+		[
+			Expression(127)
+			[32 r1]
+			#chord32
+			:
+			Sub{r1r1Expression.onTime(127,40,!1^2.)}
+			l1^1^1^2. BG(ea>c#) r4
+		]
+		Expression(127)
+		#chord52
+		#chord32
+		#chord32
+		#chord61
+}
+
+// バックギター
+
+IF(BGUITAR=1) {
+	TR(4)
+		#INIT
+		l8o4
+		#g1={q80 RandV(60,65) @(JazzGuitar)}
+		#g2={q50 RandV(50,65) @(MutedGuitar)}
+		#eac={BG(ea>c#<)}
+		#egb={BG(eg#b)}
+		#fac={BG(f#a>c#<)}
+		#egc={BG(eg#>c#<)}
+		#fpad={BG(f#a>d<)}
+		#fpadp={BG(f#a>d#<)}
+		#gpbe={BG(g#b>e<)}
+		#gbe={BG(gb>e<)}
+		#gbdp={BG(g#b>d#<)}
+		#acf={BG(a>cf<)}
+		#ace={BG(a>ce<)}
+		#bdg={BG(b>dg<)}
+		#bdfp={BG(b>df#<)}
+		#fad={BG(fa>d<)}
+		#egd={BG(eg#>d<)}
+		#gce={BG(g>ce<)}
+		#gcdp={BG(g>cd#<)}
+		#gcf={BG(g>cf<)}
+		#gcfp={BG(g>cf#<)}
+		#gcg={BG(g>cg<)}
+
+		#eac1={#g1 #eac [#g2 #eac] #g1 #eac [#g2 #eac] #g1 #eac #g2 #eac}
+		#eac2={[#g2 #eac] #g1 #eac [#g2 #eac] #g1 #eac [#g2 #eac]}
+
+		#eac3={#g1 #eac [#g2 #eac] #g1 #eac [#g2 #eac] #g1 #egb #g2 #egb}
+		#egb1={#g1 #egb [#g2 #egb] #g1 #egb [#g2 #egb] #g1 #egb #g2 #egb}
+		#egb2={[#g2 #egb] #g1 #egb [#g2 #egb] #g1 #egb [#g2 #egb]}
+		#fac1={#g1 #fac [#g2 #fac] #g1 #fac [#g2 #fac] #g1 #fac #g2 #fac}
+		#fac3={#g1 #fac [#g2 #fac] #g1 #fac [#g2 #fac] #g1 #egc #g2 #egc}
+		#egc1={#g1 #egc [#g2 #egc] #g1 #egc [#g2 #egc] #g1 #egc #g2 #egc}
+		#egc2={[#g2 #egc] #g1 #egc [#g2 #egc] #g1 #egc [#g2 #egc]}
+		#fpad1={#g1 #fpad [#g2 #fpad] #g1 #fpad [#g2 #fpad] #g1 #fpad #g2 #fpad}
+		#gpbe1={#g1 #gpbe [#g2 #gpbe] #g1 #gpbe [#g2 #gpbe] #g1 #gpbe #g2 #gpbe}
+		#gpbe2={[#g2 #gpbe] #g1 #gpbe [#g2 #gpbe] #g1 #gpbe [#g2 #gpbe]}
+		#gbe1={#g1 #gbe [#g2 #gbe] #g1 #gbe [#g2 #gbe] #g1 #gbe #g2 #gbe}
+		#gbe2={[#g2 #gbe] #g1 #gbe [#g2 #gbe] #g1 #gbe [#g2 #gbe]}
+
+		#acf1={#g1 #acf [#g2 #acf] #g1 #acf [#g2 #acf] #g1 #acf #g2 #acf}
+		#acf2={[#g2 #acf] #g1 #acf [#g2 #acf] #g1 #acf [#g2 #acf]}
+		#ace2={[#g2 #ace] #g1 #ace [#g2 #ace] #g1 #ace [#g2 #ace]}
+		#fad1={#g1 #fad [#g2 #fad] #g1 #fad [#g2 #fad] #g1 #fad #g2 #fad}
+		#fad2={[#g2 #fad] #g1 #fad [#g2 #fad] #g1 #fad [#g2 #fad]}
+		#egd1={#g1 #egd [#g2 #egd] #g1 #egd [#g2 #egd] #g1 #egd #g2 #egd}
+		#egd2={[#g2 #egd] #g1 #egd [#g2 #egd] #g1 #egd [#g2 #egd]}
+
+		[10 r1]
+		[#eac1 #eac2]
+		[
+			l8
+			//1
+			[
+				#eac3 #egb2
+				#fac3 #egc2
+				#fpad1 #eac2
+				:
+				#g1 #fpad #g2 #fpad #g1 #fac #fpad #g2 #fpad #g1 #fpadp #g2 #fpadp #g1 #gpbe
+				#gpbe2
+			]
+			#g1 #fpad #g2 #fpad #fac #fpad
+			#g1 #gbe #g2 #gbe #gbdp #gbe
+			#g1 #acf #g2 #acf #ace #acf
+			#g1 #bdg #g2 #bdg #bdfp #bdg
+
+			//2
+			#acf1 #acf2
+			#gbe1 #ace2
+			#fad1 #egd2
+			#g1 #gce #g2 #gce #gcdp #gce
+			#g1 #gcf #g2 #gcf #gce #gcf
+			#g1 #gcfp #g2 #gcfp #gcf #gcfp
+			#g1 #gcg #g2 #gcg #gcfp #gcg
+			#acf1 #acf2
+			#gbe1 #ace2
+			#fad1 #fad2
+			#egd1 #egd2
+
+			//3
+			o5 #g1
+			#chord31
+			:
+			l8[#eac1 #eac2]
+			<
+		]
+		[34 r1]
+		o5 #g1
+		#chord31
+}
+
+// コーラス
+
+IF(VOCAL=1) {
+	TR(7)
+		#INIT
+		[14 r1]
+		v65
+		o5q100
+		IF(TIMIDITY=1) {
+			r-16
+		}
+		@(ChoirAahs)
+		[
+			Expression(127)
+			[16 r1]
+			#chord21
+			#chord32
+			:
+			Sub{r1r1Expression.onTime(127,40,!1^2.)}
+			l1^1^1^2. BG(ea>c#) r4
+		]
+		Expression(127)
+		#chord52
+		#chord32
+		#chord32
+		#chord61
+}
+
+// ベース
+
+IF(BASS=1) {
+	TR(9)
+		#b1={RandV(125,127) q95 @(PickBass)}
+		#b2={RandV(100,110) q70 @(SlapBass1)}
+		l8
+		o4
+		#b1
+		d1^4 <b4.>c4.
+		c#1
+		<f#4>f#4.e4.
+		<
+		b4.>c#2 d2 d#2 <e8^1^4
+		 >e4.<b4.
+		e1^4> #b2 e rr< #b1 eee
+
+		<
+		[
+			//1
+			#b1 a4.a rr> #b2 ar<
+			#b1 rrar ra4.
+			#b1 a4.a rr> #b2 ar<
+			#b1 rrar reee
+
+			[
+				#b1 a4.a > #b2 ra rr < #b1 rrg#r rg#4.
+				#b1 f#4.f# > #b2 rf# rr #b1 rrc#r rc#4.
+				#b1 d4.d rdrd rrc#r #b2 rf# #b1 <rf#
+				:
+				#b1 b4>c#d rd#re #b2 rrer #b1 <reee
+			]
+			#b1 b4a#b >c#4<b>c# d4c#d e4 d#e
+
+			//2
+			[
+				#b1 f4. <#b1 f > #b2 rf < #b1 rf
+				rrfr >#b1 rf4.
+				#b1 e4. <#b1 e > #b2 re < #b1 re
+				rrar >#b1 ra4.<
+				#b1 b4. #b1 b > #b2 rb < #b1 rb
+				:
+				rrer >#b1 re4.
+				c4<b>c c#4cc#
+				d4c#d e4d#e
+			]
+			rrbr >#b1 rb4.
+			#b1 e4. <#b1 e > #b2 re < #b1 re
+			rrer >#b2 reee<
+
+			//3
+			[
+				#b1 a4.a > #b2 a4. <#b1 a
+				#b1 g#4.g# > #b2 g#4. <#b1 g#
+				#b1 f#4.f# > #b2 f#4. <#b1 f#
+				#b1 e4.e > #b2 e4. <#b1 e
+				>
+				#b1 d4.d > #b2 d4. <#b1 d
+				#b1 c#4.c# > #b2 c#4. <#b1 c#
+				<
+				:
+				#b1 b4.b > #b2 b4. <#b1 b
+				#b1 e4.e > #b2 e <#b1 eee
+			]
+			#b1 f4.f > #b2 f4. <#b1 f
+			f2g2
+		]
+
+		#b1 f4.f > #b2 rf <#b1 rg
+		r4 #b2 > g4 < #b1 r g4.
+		#b1 e4.e > #b2 re <#b1 re
+		r4 #b2 > a4 < #b1 r a4.
+		#b1 d4.d > #b2 rd <#b1 rg
+		r4 #b2 > g4 < #b1 r g4.
+		> c4<b>c c#4cc# d4c#d e4d#e<
+
+		#b1 f4.f > #b2 rf <#b1 rg
+		r4 #b2 > g4 < #b1 r g4.>
+		#b1 c4.>#b2 c <<#b1 b4. >#b2 a<
+		#b1 a4. a > #b2 ra <#b1 ra
+		#b1 d4.d > #b2 rd <#b1 rd
+		r4 #b2 > d4 < #b1 r d4.
+		#b1 b4.b > #b2 rb <#b1 rb
+		r4 #b2 > b4 < #b1 r b4.
+		#b1 e4.e > #b2 re <#b1 re
+		r4 er >e<bg#e
+
+		>
+		l1
+		ag#f#edc#<b>e
+		ag#f#edc#<f f2g2
+
+		l8
+		[1
+			[
+				#b1 a4.a > #b2 a4. <#b1 a
+				#b1 g#4.g# > #b2 g#4. <#b1 g#
+				#b1 f#4.f# > #b2 f#4. <#b1 f#
+				#b1 e4.e > #b2 e4. <#b1 e
+				>
+				#b1 d4.d > #b2 d4. <#b1 d
+				#b1 c#4.c# > #b2 c#4. <#b1 c#
+				<
+				:
+				#b1 b4.b > #b2 b4. <#b1 b
+				#b1 e4.e > #b2 e <#b1 eee
+			]
+			#b1 f4.f > #b2 f4. <#b1 f
+			f2g2
+		]
+		#bq100 a1 >e6d6c#6<b6
+		Sub{r2.Expression(127,0,!8.)}
+		a1
+
+}
+
+// ドラム
+
+IF(DRUM=1) {
+	TR(10)
+		#INIT
+		Voice(1)
+		$k{Sub{RandR(999,1728) RandV(124,127) n(Sticks),16}r} //37
+		$B{Sub{RandR(999,1728) RandV(124,127) n(Kick2),16}r}//35
+		$b{Sub{RandR(999,1728) RandV(124,127) n(Kick1),16}r}//36
+		$S{Sub{RandR(999,1728) RandV(120,127) n(Snare2),16}r}//40
+		$s{Sub{RandR(999,1728) RandV(120,127) n(Snare1),16}r}//38
+		$L{Sub{RandR(999,1728) RandV(123,127) n(LowTom2),16}r}//41
+		$l{Sub{RandR(999,1728) RandV(123,127) n(LowTom1),16}r}//43
+		$M{Sub{RandR(999,1728) RandV(123,127) n(MidTom2),16}r}//45
+		$m{Sub{RandR(999,1728) RandV(123,127) n(MidTom1),16}r}//47
+		$T{Sub{RandR(999,1728) RandV(123,127) n(HighTom2),16}r}//48
+		$t{Sub{RandR(999,1728) RandV(123,127) n(HighTom1),16}r}//50
+		$p{Sub{RandR(999,1728) RandV(110,127) n(PedalHiHat),16}r}//44
+		$h{Sub{RandR(999,1728) RandV( 65, 80) n(ClosedHiHat),16}r}//42
+		$o{Sub{RandR(999,1728) RandV( 90,110) n(OpenHiHat),16}r}//46
+		$r{Sub{RandR(999,1728) RandV(100,110) n(RideCymbal1),16}r}//51
+		$R{Sub{RandR(999,1728) RandV(120,127) n(RideBell),16}r}//53
+		// Ride cup
+		$i{Sub{RandR(999,1728) RandV( 85,95)  n(MuteHighConga),16}r}//62
+		$I{Sub{RandR(999,1728) RandV(120,127) n(OpenHighConga),16}r}//63
+		$C{Sub{RandR(999,1728) RandV(120,127) n(Cymbal()),16}r}//49
+		$c{Sub{RandR(999,1728) RandV(120,127) n(Splash()),16}r}//49
+
+		// alt cymbal
+		$y{Sub{RandR(999,1728) RandV(120,127) n(HighBongo),16}r}//60
+		$Y{Sub{RandR(999,1728) RandV(120,127) n(LowBongo),16}r}//6 
+
+		// BellTree
+		$Z{Sub{RandR(999,1728) RandV(125,127) n(BellTree),16}r}//6 
+		$z{Sub{RandR(999,1728) RandV(125,127) n(JingleBell),16}r}//6 
+		$a{Sub{RandR(999,1728) RandV(125,127) n(85),16}r}//6 
+		$A{Sub{RandR(999,1728) RandV(125,127) n(86),1^1^1^1^1^1^1^1}r}//6 
+
+//		Expression(127)
+		Sub{Expression.onTime(0,127,!1^1) r1 r1 Expression.onTime(127,0,!1^1)}
+		Sub{r4 Rythm{A1^1^1^1^1^1}}
+		[8 r1]
+
+		Expression(127)
+		r2  Rythm{a2} r2r8Rythm{t8m8l8}
+
+		#r01={
+			Sub{Rythm{[8 h8]}}
+			Rythm{b4.b4s4b8}
+		}
+		#r02={
+			Sub{Rythm{o8[7 h8]}}
+			r4 Rythm{b2^8b8}
+		}
+
+		#r03={
+			Sub{Rythm{o8[7 h8]}}
+			r4 Rythm{b4.t8m8l8}
+		}
+		#r04={
+			Sub{Rythm{o8[3 h8]}}
+			Rythm{b4s8b8}
+		}
+
+		#r05={
+			Sub{Rythm{o8 [3 h8]}}
+			Rythm{b8t8m8l8}
+		}
+
+		#r06={
+			Sub{Rythm{o8 [7 h8]}}
+			r4 Rythm{b2b4}
+		}
+
+		#r07={
+			Sub{Rythm{[4 h8]}}
+			r4Rythm{b4}
+		}
+		#r11={
+			Sub{Rythm{[4 h8]o8[3 h8]}}
+			Rythm{b2s2}
+		}
+		#r12={
+			Sub{Rythm{[4 h8]o8[3 h8]}}
+			Rythm{b2s4.b8}
+		}
+		#r13={
+			Sub{Rythm{[o8[3 h8]]}}
+			Sub{Rythm{c2c2}}
+			Rythm{b2t8m8l8L8}
+		}
+
+		[
+			Sub{Rythm{C1}}
+			#r01 #r02 #r01 #r03
+
+			Sub{Rythm{c1}}
+			[3 #r01 #r02] #r01 #r03
+			Sub{Rythm{c1}}
+			[3 #r01 #r02] [3 #r04] #r05
+
+			Sub{Rythm{c1}}
+			[3 #r01 #r06]  [3 #r04] #r05
+			Sub{Rythm{c1}}
+			[2 #r01 #r06] #r01 #r02 #r01 #r07 #r05
+
+			Sub{Rythm{C1}}
+			[3 #r11 #r12]  #r11 #r13
+			Sub{Rythm{C1}}
+			[3 #r11 #r12]  #r11 #r13
+		]
+
+		Sub{Rythm{c1}}
+		Sub{Rythm{[15 r2]}}
+		[3 #r11] #r12 [#r11] #r12 #r13
+		Sub{Rythm{c1^1c2c2c1c1}}
+		Sub{Rythm{[15 r2]}}
+		#r11 [6 #r12] #r13 #r12 #r13
+
+		Rythm{z1}
+		[7 r1]
+		Rythm{Z1}
+		[6 r1]
+		r2 Rythm{t8m8l8L8}
+
+		Sub{Rythm{C1}}
+		[3 #r11 #r12]  #r11 #r13
+		Sub{Rythm{C1}}
+		[3 #r11 #r12]  #r11 #r13
+
+	Sub {
+		Expression.onTime(60,127,!1)
+		r1
+		Expression.onTime(127,60,!1)
+	}
+	Rythm {
+		R9R10R11R12R13R14R15R16R17R18R19R20R21R22R21R20R19R18R17R16R15R14R13R12R11R10R9R87R6R5
+	}
+	r2.
+	Expression(127)
+	Sub {r2.^8 Expression.onTime(127,0,!2)}
+	Rythm {
+		m24t24m24 'b1.s1.o1.c1.C1.'
+	}
+}
+
+

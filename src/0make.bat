@@ -1,0 +1,191 @@
+@echo off
+
+echo ----------------------------------------------------
+echo SAKURA to TiMidity++ generation %1
+echo Copyright(C) 2014 NEET co.ltd. (00264 nano)
+echo License GPL3
+echo ----------------------------------------------------
+
+echo Include 1config.bat
+call 1config.bat
+echo TiMidity++ Binary : %TIMIDITYBIN%
+echo TiMidity++ Patch  : %TIMIDITYPAT%
+echo OUTPUT WAVE       : %OUTPUT%
+
+echo ----------------------------------------------------
+echo Include project.bat
+call project.bat
+echo Title             : %TITLE%
+echo TiMidity++ Config : %CONFIG%
+echo TiMidity++ Option : %OPTION%
+echo ----------------------------------------------------
+
+IF "%1" == "" goto all
+goto wavbuild2
+
+:all
+SET CMML=%MML1%
+SET MMLREPLACE=%MMLREPLACE1%
+SET MIDI=%MIDI1%
+SET MIDIPLAY=%MIDI1PLAY%
+call :build
+
+SET CMML=%MML2%
+SET MMLREPLACE=%MMLREPLACE2%
+SET MIDI=%MIDI2%
+SET MIDIPLAY=%MIDI2PLAY%
+call :build
+
+SET CMML=%MML3%
+SET MMLREPLACE=%MMLREPLACE3%
+SET MIDI=%MIDI3%
+SET MIDIPLAY=%MIDI3PLAY%
+call :build
+
+SET CMML=%MML4%
+SET MMLREPLACE=%MMLREPLACE4%
+SET MIDI=%MIDI4%
+SET MIDIPLAY=%MIDI4PLAY%
+call :build
+
+SET CMML=%MML5%
+SET MMLREPLACE=%MMLREPLACE5%
+SET MIDI=%MIDI5%
+SET MIDIPLAY=%MIDI5PLAY%
+call :build
+
+SET CMML=%MML6%
+SET MMLREPLACE=%MMLREPLACE6%
+SET MIDI=%MIDI6%
+SET MIDIPLAY=%MIDI6PLAY%
+call :build
+
+SET CMML=%MML7%
+SET MMLREPLACE=%MMLREPLACE7%
+SET MIDI=%MIDI7%
+SET MIDIPLAY=%MIDI7PLAY%
+call :build
+
+SET CMML=%MML8%
+SET MMLREPLACE=%MMLREPLACE8%
+SET MIDI=%MIDI8%
+SET MIDIPLAY=%MIDI8PLAY%
+call :build
+
+SET CMML=%MML9%
+SET MMLREPLACE=%MMLREPLACE9%
+SET MIDI=%MIDI9%
+SET MIDIPLAY=%MIDI9PLAY%
+call :build
+
+SET CMML=%MML10%
+SET MMLREPLACE=%MMLREPLACE10%
+SET MIDI=%MIDI10%
+SET MIDIPLAY=%MIDI10PLAY%
+call :build
+
+SET CMML=%MML11%
+SET MMLREPLACE=%MMLREPLACE11%
+SET MIDI=%MIDI11%
+SET MIDIPLAY=%MIDI11PLAY%
+call :build
+
+SET CMML=%MML12%
+SET MMLREPLACE=%MMLREPLACE12%
+SET MIDI=%MIDI12%
+SET MIDIPLAY=%MIDI12PLAY%
+call :build
+
+SET CMML=%MML13%
+SET MMLREPLACE=%MMLREPLACE13%
+SET MIDI=%MIDI13%
+SET MIDIPLAY=%MIDI13PLAY%
+call :build
+
+SET CMML=%MML14%
+SET MMLREPLACE=%MMLREPLACE14%
+SET MIDI=%MIDI14%
+SET MIDIPLAY=%MIDI14PLAY%
+call :build
+
+SET CMML=%MML15%
+SET MMLREPLACE=%MMLREPLACE15%
+SET MIDI=%MIDI15%
+SET MIDIPLAY=%MIDI15PLAY%
+call :build
+
+SET CMML=%MML16%
+SET MMLREPLACE=%MMLREPLACE16%
+SET MIDI=%MIDI16%
+SET MIDIPLAY=%MIDI16PLAY%
+call :build
+
+SET CMML=%MML17%
+SET MMLREPLACE=%MMLREPLACE17%
+SET MIDI=%MIDI17%
+SET MIDIPLAY=%MIDI17PLAY%
+call :build
+
+SET CMML=%MML18%
+SET MMLREPLACE=%MMLREPLACE18%
+SET MIDI=%MIDI18%
+SET MIDIPLAY=%MIDI18PLAY%
+call :build
+
+SET CMML=%MML19%
+SET MMLREPLACE=%MMLREPLACE19%
+SET MIDI=%MIDI19%
+SET MIDIPLAY=%MIDI19PLAY%
+call :build
+
+SET CMML=%MML20%
+SET MMLREPLACE=%MMLREPLACE20%
+SET MIDI=%MIDI20%
+SET MIDIPLAY=%MIDI20PLAY%
+call :build
+
+goto exit
+
+:build
+
+:midibuild
+IF "%MML%"=="" goto wavbuild
+IF "%CMML%"=="" goto wavbuild
+
+%PERLHOME%\bin\perl.exe mmlreplace.pl %MML% %CMML% "%MMLREPLACE%"
+
+%CSAKURAHOME%\csakura.exe %CMML% %MIDI%
+
+:wavbuild
+
+IF "%MIDI%"=="" goto :exitb
+
+rem pushd "%TIMIDITYBIN%"
+copy "%INPUT%\%CONFIG%" "%TIMIDITYCFG%"
+IF "%MIDIPLAY%"=="1" call :preview
+
+echo %TIMIDITYBIN%\timidity.exe -c %TIMIDITYRCFGPATH%/%CONFIG% -Ow %OPTION% %MIDI%
+start 0make.bat %MIDI% %CONFIG%
+
+:exitb
+rem popd
+exit /b
+
+:wavbuild2
+pushd "%TIMIDITYBIN%"
+IF "%MIDI%"=="" goto :exitb
+copy "%INPUT%\%CONFIG%" "%TIMIDITYCFG%"
+echo %TIMIDITYBIN%\timidity.exe -c %TIMIDITYRCFGPATH%/%2 -Ow %OPTION% %INPUT%\%1
+%TIMIDITYBIN%\timidity.exe -c %TIMIDITYRCFGPATH%/%2 -Ow %OPTION% %INPUT%\%1
+popd
+rem pause
+exit
+
+:preview
+start %TIMIDITYBIN%\timidity.exe -c %TIMIDITYRCFGPATH%/%CONFIG% %PLAYOPTION% %INPUT%\%MIDI%
+exit /b
+
+:exit
+del "%TIMIDITYCFG%\%CONFIG%"
+
+:end
