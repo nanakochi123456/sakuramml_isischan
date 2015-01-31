@@ -33,7 +33,7 @@ IF(TIMIDITY=0 || ALL=1) {
 }
 
 
-曲名{"Give Me Merorin by ISIL48"}
+曲名{"Give Me Merorin by ISIL48 "}
 作者{"@nanakochi123456"}
 
 IF(TIMIDITY=1 && VOCALOID==1) {
@@ -172,6 +172,35 @@ Function BG(Str MML) {
 	}
 }
 
+#eacp={BG(ea>c#<)}
+#eac={BG(ea>c<)}
+#egc={BG(eg>c<)}
+#egb={BG(eg#b)}
+#fac={BG(fa>c<)}
+#fpac={BG(f#a>c#<)}
+#egpcp={BG(eg#>c#<)}
+#fpad={BG(f#a>d<)}
+#fpadp={BG(f#a>d#<)}
+#gpbe={BG(g#b>e<)}
+#gbe={BG(gb>e<)}
+#gbdp={BG(g#b>d#<)}
+#acf={BG(a>cf<)}
+#ace={BG(a>ce<)}
+#bdg={BG(b>dg<)}
+#bdfp={BG(b>df#<)}
+#fad={BG(fa>d<)}
+#egpd={BG(eg#>d<)}
+#egd={BG(eg>d<)}
+#gce={BG(g>ce<)}
+#gcdp={BG(g>cd#<)}
+#gcf={BG(g>cf<)}
+#gcfp={BG(g>cf#<)}
+#gcg={BG(g>cg<)}
+#fgbd={BG(fgbd)}
+#gbd={BG(gb>d<)}
+#abe={BG(ab>e<)}
+#gpbe={BG(#gb>e<)}
+
 // テンポ
 TR(1)
 	[163 r1]
@@ -244,7 +273,7 @@ TR(1)
 		//   むかー
 		rrrr rcfa
 		//ーてゆく
-		g4r4a2b2>c2
+		g4r4a2b2>c4..r16
 		//いのちを
 		d2^c<b>c^2^
 		//つなげ
@@ -565,23 +594,25 @@ IF(EGUITAR=1) {
 		PitchBendSensitivity(1)
 		o7q99v127
 		l6
-		r [p.onTime(0,64,!12)c] p.onTime(50,64,!4)l2^6 BG(<f>c)
+		r [p.onTime(15,64,!10)c] p.onTime(30,64,!4)l2^6 BG(<f>c)
 		l6
 		<b>cd<bg
-		g2^gb-
+		Sub{p.onTime(64,80,!4) r4 p.onTime(80,64,!4.)}g2^gb-
 		a2efg
-		f2fga
-		g2d2
-		e2^2>
+		Sub{p.onTime(64,50,!4) r4 p.onTime(50,64,!4)}f2fga
+		Sub{p.onTime(64,75,!4) r4 p.onTime(75,64,!4)}g2Sub{p.onTime(64,50,!4) r4 p.onTime(50,64,!4)}d2
+		Sub{p.onTime(64,45,!4) r4 p.onTime(45,64,!4)}e2^2>
 		r2r2
-		r6[p.onTime(0,64,!12) BG(<f>c)] l2^6 BG(<f>c)
+		r [p.onTime(15,64,!10)c] p.onTime(30,64,!4)l2^6 BG(<f>c)
 		l6<b>cd<bg>
-		e2d2
+		Sub{p.onTime(64,85,!4) r4 p.onTime(85,64,!4)}e2 Sub{p.onTime(64,85,!4) r4 p.onTime(85,64,!4)}d2
 		c2<ab>c
+		
 		d2def
 		e2c2
-		'<f1^1>d1^1'
-		Sub{<a1g#1>}e1^1
+		l1^1 Sub{'<f1^1>d1'}r1 [3 l3 BG(da)]<
+//		Sub{<a1g#1>}e1^1
+		Sub{r1. Expression.onTime(127,40,!2) } l1^1 BG(eb>eb)
 }
 
 // ピアノ
@@ -597,6 +628,24 @@ IF(PIANO=1) {
 		l8g#a l4 BG(d#f#b) l8 >c#d# < l8^1^1 BG(ab>e)<
 		l1^2. BG(g#b>e<) r4
 		l1^2. BG(ea>c#<)r4
+
+		[102 r1]
+		o5
+		l4.#fac l8 [3 #fac r] r l2. #gbd
+		l4.#egd l8 [3 #egd r] r l2. #eac
+		l4.#fac l8 [3 #fac r] r l2. #fgbd
+		l2
+		Sub{BG(eg>c4<)}r4 b8>c8< 
+		Sub{BG(eg>c#4<)}r4 >c8c#8< 
+		Sub{BG(eg>d4<)}r4 >c#8d8< 
+		Sub{BG(eg>e4<)}r4 >d#8e8< 
+
+		l4.#fac l8 [3 #fac r] r l2. #gbd
+//		l4.#egpd l8 [3 #egpd r] r l2. #eac
+		l2 #egc #egb l4.#eac l8 #eac r2
+		l4.#fac l8 [3 #fac r] r l2. #fac
+		l4.#fad l8 [3 #fad r] r l2. #fad
+		l4.#abe l8 [3 #abe r] r l2. #gpbe
 }
 
 // オルガン
@@ -754,37 +803,17 @@ IF(BGUITAR=1) {
 		l8o4
 		#g1={q80 RandV(60,65) @(JazzGuitar)}
 		#g2={q50 RandV(50,65) @(MutedGuitar)}
-		#eac={BG(ea>c#<)}
-		#egb={BG(eg#b)}
-		#fac={BG(f#a>c#<)}
-		#egc={BG(eg#>c#<)}
-		#fpad={BG(f#a>d<)}
-		#fpadp={BG(f#a>d#<)}
-		#gpbe={BG(g#b>e<)}
-		#gbe={BG(gb>e<)}
-		#gbdp={BG(g#b>d#<)}
-		#acf={BG(a>cf<)}
-		#ace={BG(a>ce<)}
-		#bdg={BG(b>dg<)}
-		#bdfp={BG(b>df#<)}
-		#fad={BG(fa>d<)}
-		#egd={BG(eg#>d<)}
-		#gce={BG(g>ce<)}
-		#gcdp={BG(g>cd#<)}
-		#gcf={BG(g>cf<)}
-		#gcfp={BG(g>cf#<)}
-		#gcg={BG(g>cg<)}
 
-		#eac1={#g1 #eac [#g2 #eac] #g1 #eac [#g2 #eac] #g1 #eac #g2 #eac}
-		#eac2={[#g2 #eac] #g1 #eac [#g2 #eac] #g1 #eac [#g2 #eac]}
+		#eacp1={#g1 #eacp [#g2 #eacp] #g1 #eacp [#g2 #eacp] #g1 #eacp #g2 #eacp}
+		#eacp2={[#g2 #eacp] #g1 #eacp [#g2 #eacp] #g1 #eacp [#g2 #eacp]}
 
-		#eac3={#g1 #eac [#g2 #eac] #g1 #eac [#g2 #eac] #g1 #egb #g2 #egb}
+		#eacp3={#g1 #eacp [#g2 #eacp] #g1 #eacp [#g2 #eacp] #g1 #egb #g2 #egb}
 		#egb1={#g1 #egb [#g2 #egb] #g1 #egb [#g2 #egb] #g1 #egb #g2 #egb}
 		#egb2={[#g2 #egb] #g1 #egb [#g2 #egb] #g1 #egb [#g2 #egb]}
-		#fac1={#g1 #fac [#g2 #fac] #g1 #fac [#g2 #fac] #g1 #fac #g2 #fac}
-		#fac3={#g1 #fac [#g2 #fac] #g1 #fac [#g2 #fac] #g1 #egc #g2 #egc}
-		#egc1={#g1 #egc [#g2 #egc] #g1 #egc [#g2 #egc] #g1 #egc #g2 #egc}
-		#egc2={[#g2 #egc] #g1 #egc [#g2 #egc] #g1 #egc [#g2 #egc]}
+		#fpac1={#g1 #fpac [#g2 #fpac] #g1 #fpac [#g2 #fpac] #g1 #fpac #g2 #fpac}
+		#fpac3={#g1 #fpac [#g2 #fpac] #g1 #fpac [#g2 #fpac] #g1 #egpcp #g2 #egpcp}
+		#egpcp1={#g1 #egpcp [#g2 #egpcp] #g1 #egpcp [#g2 #egpcp] #g1 #egpcp #g2 #egpcp}
+		#egpcp2={[#g2 #egpcp] #g1 #egpcp [#g2 #egpcp] #g1 #egpcp [#g2 #egpcp]}
 		#fpad1={#g1 #fpad [#g2 #fpad] #g1 #fpad [#g2 #fpad] #g1 #fpad #g2 #fpad}
 		#gpbe1={#g1 #gpbe [#g2 #gpbe] #g1 #gpbe [#g2 #gpbe] #g1 #gpbe #g2 #gpbe}
 		#gpbe2={[#g2 #gpbe] #g1 #gpbe [#g2 #gpbe] #g1 #gpbe [#g2 #gpbe]}
@@ -796,23 +825,23 @@ IF(BGUITAR=1) {
 		#ace2={[#g2 #ace] #g1 #ace [#g2 #ace] #g1 #ace [#g2 #ace]}
 		#fad1={#g1 #fad [#g2 #fad] #g1 #fad [#g2 #fad] #g1 #fad #g2 #fad}
 		#fad2={[#g2 #fad] #g1 #fad [#g2 #fad] #g1 #fad [#g2 #fad]}
-		#egd1={#g1 #egd [#g2 #egd] #g1 #egd [#g2 #egd] #g1 #egd #g2 #egd}
-		#egd2={[#g2 #egd] #g1 #egd [#g2 #egd] #g1 #egd [#g2 #egd]}
+		#egpd1={#g1 #egpd [#g2 #egpd] #g1 #egpd [#g2 #egpd] #g1 #egpd #g2 #egpd}
+		#egpd2={[#g2 #egpd] #g1 #egpd [#g2 #egpd] #g1 #egpd [#g2 #egpd]}
 
 		[10 r1]
-		[#eac1 #eac2]
+		[#eacp1 #eacp2]
 		[
 			l8
 			//1
 			[
-				#eac3 #egb2
-				#fac3 #egc2
-				#fpad1 #eac2
+				#eacp3 #egb2
+				#fpac3 #egpcp2
+				#fpad1 #eacp2
 				:
-				#g1 #fpad #g2 #fpad #g1 #fac #fpad #g2 #fpad #g1 #fpadp #g2 #fpadp #g1 #gpbe
+				#g1 #fpad #g2 #fpad #g1 #fpac #fpad #g2 #fpad #g1 #fpadp #g2 #fpadp #g1 #gpbe
 				#gpbe2
 			]
-			#g1 #fpad #g2 #fpad #fac #fpad
+			#g1 #fpad #g2 #fpad #fpac #fpad
 			#g1 #gbe #g2 #gbe #gbdp #gbe
 			#g1 #acf #g2 #acf #ace #acf
 			#g1 #bdg #g2 #bdg #bdfp #bdg
@@ -820,7 +849,7 @@ IF(BGUITAR=1) {
 			//2
 			#acf1 #acf2
 			#gbe1 #ace2
-			#fad1 #egd2
+			#fad1 #egpd2
 			#g1 #gce #g2 #gce #gcdp #gce
 			#g1 #gcf #g2 #gcf #gce #gcf
 			#g1 #gcfp #g2 #gcfp #gcf #gcfp
@@ -828,13 +857,13 @@ IF(BGUITAR=1) {
 			#acf1 #acf2
 			#gbe1 #ace2
 			#fad1 #fad2
-			#egd1 #egd2
+			#egpd1 #egpd2
 
 			//3
 			o5 #g1
 			#chord31
 			:
-			l8[#eac1 #eac2]
+			l8[#eacp1 #eacp2]
 			<
 		]
 		[34 r1]
@@ -944,7 +973,8 @@ IF(BASS=1) {
 		r4 #b2 > a4 < #b1 r a4.
 		#b1 d4.d > #b2 rd <#b1 rg
 		r4 #b2 > g4 < #b1 r g4.
-		> c4<b>c c#4cc# d4c#d e4d#e<
+//		> c4<b>c c#4cc# d4c#d e4d#e<
+		#b1 >c4.> #b2 c<< #b1 b4.> #b2 b< #b1 a4.> #b2 a< #b1 g4.>#b2 g<
 
 		#b1 f4.f > #b2 rf <#b1 rg
 		r4 #b2 > g4 < #b1 r g4.>
