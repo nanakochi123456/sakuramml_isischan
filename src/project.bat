@@ -1,4 +1,4 @@
-SET TITLE=êVà§Ç∆óEãCÇ™
+SET TITLE=Give Me Merorin by ISIL48
 SET CONFIG=isischan.cfg
 SET EFFECT= -EFchorus=d,1 -EFreverb=d,1 --volume=70, --drum-power=70
 SET PLAYOPTION=--output-stereo --sampling-freq=96000 %EFFECT% --output-24bit
