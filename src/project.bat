@@ -16,6 +16,7 @@ SET MMLREPLACE7=Int TIMIDITY=0/Int TIMIDITY=1,Int SYNTH=0/Int SYNTH=1
 SET MMLREPLACE8=Int TIMIDITY=0/Int TIMIDITY=1,Int BASS=0/Int BASS=1
 SET MMLREPLACE9=Int TIMIDITY=0/Int TIMIDITY=1,Int VOCAL=0/Int VOCAL=1
 SET MMLREPLACE10=Int TIMIDITY=0/Int TIMIDITY=1,Int DRUM=0/Int DRUM=1
+SET MMLREPLACE11=Int TIMIDITY=0/Int TIMIDITY=1,Int SFX=0/Int SFX=1
 
 
 SET MML1=isischan_all.mml
@@ -28,6 +29,7 @@ SET MML7=isischan_synth.mml
 SET MML8=isischan_bass.mml
 SET MML9=isischan_vocal.mml
 SET MML10=isischan_drum.mml
+SET MML11=isischan_sfx.mml
 
 SET MIDI1=isischan_all.mid
 SET MIDI2=isischan_vocaloid.mid
@@ -39,5 +41,6 @@ SET MIDI7=isischan_synth.mid
 SET MIDI8=isischan_bass.mid
 SET MIDI9=isischan_vocal.mid
 SET MIDI10=isischan_drum.mid
+SET MIDI11=isischan_sfx.mid
 
 SET MIDI1PLAY=0

@@ -17,6 +17,7 @@ Int SYNTH=0
 Int BASS=0
 Int VOCAL=0
 Int DRUM=0
+Int SFX=0
 Int GAKUHU=0
 Int ALL=0
 
@@ -30,6 +31,7 @@ IF(TIMIDITY=0 || ALL=1) {
 	BASS=1
 	VOCAL=1
 	DRUM=1
+	SFX=1
 }
 
 
@@ -546,7 +548,7 @@ IF(VOCALOID=1) {
 		#u43
 
 	// ‚Ý‚­
-	TR(15)
+	TR(13)
 		#INIT
 		q97
 		@(Violin)
@@ -567,7 +569,7 @@ IF(VOCALOID=1) {
 
 	// ‚ª‚Á‚­‚Û‚¢‚Ç
 	IF(0){
-	TR(16)
+	TR(14)
 		#INIT
 		q98
 		@(Trombone)
@@ -1019,6 +1021,30 @@ IF(BASS=1) {
 
 }
 
+// SFX
+IF(SFX=1) {
+	TR(15)
+		#INIT
+		v127o5q100
+		Sub{
+			@(126)
+			Sub{Expression.onTime(0,127,!1.) r1 r1 Expression.onTime(127,0,!1^1^1^1)}
+			Sub{r4 c1^1^1^1^1}
+		}
+
+	TR(16)
+		#INIT
+		v127o5q100
+		Sub{
+			[4 r1]
+			PitchBendSensitivity(12)
+			@(127)
+			p.onTime(127,0,!1^1^1^1^1^1)
+			Sub{Expression.onTime(0,127,!1^1.) r1 r1 r1 Expression.onTime(127,0,!1^1^1.)}
+			Sub{b1^1^1^1^1^1}
+		}
+}
+
 // ƒhƒ‰ƒ€
 
 IF(DRUM=1) {
@@ -1062,14 +1088,6 @@ IF(DRUM=1) {
 		// Wind
 		$D{Sub{RandR(999,1728) RandV(126,127) n(87),1^1^1^1^1^1}r}//6 
 
-//		Expression(127)
-		Sub{
-			Sub{Expression.onTime(0,127,!1.) r1 r1 r1 Expression.onTime(127,0,!1^1.)}
-			Sub{r4 Rythm{A1^1^1^1^1}}
-			[4 r1]
-			Sub{Expression.onTime(0,127,!1^2) r1 r1 r1 Expression.onTime(127,0,!1^1^1)}
-			Sub{Rythm{D1^1^1^1^1^1}}
-		}
 		[8 r1]
 
 		r2  Expression(127) Rythm{a2} r2r8Rythm{t8m8l8}
