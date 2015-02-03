@@ -1025,24 +1025,30 @@ IF(BASS=1) {
 IF(SFX=1) {
 	TR(15)
 		#INIT
-		v127o5q100
-		Sub{
-			@(126)
+		Sub {
+			v40o5q100
+			@(125)
 			Sub{Expression.onTime(0,127,!1.) r1 r1 Expression.onTime(127,0,!1^1^1^1)}
 			Sub{r4 c1^1^1^1^1}
 		}
+		[10 r1]
+		v70o7q100
+		PitchBendSensitivity(12)
+		@(126)
+		p.onTime(127,0,!1^1^1^1^1^1)
+		Sub{Expression.onTime(0,127,!1^1.) r1 r1 r1 Expression.onTime(127,0,!1^1^1.)}
+		Sub{b1^1^1^1^1^1}
+
 
 	TR(16)
 		#INIT
+		[4 r1]
 		v127o5q100
-		Sub{
-			[4 r1]
-			PitchBendSensitivity(12)
-			@(127)
-			p.onTime(127,0,!1^1^1^1^1^1)
-			Sub{Expression.onTime(0,127,!1^1.) r1 r1 r1 Expression.onTime(127,0,!1^1^1.)}
-			Sub{b1^1^1^1^1^1}
-		}
+		PitchBendSensitivity(12)
+		@(127)
+		p.onTime(127,0,!1^1^1^1^1^1)
+		Sub{Expression.onTime(0,127,!1^1.) r1 r1 r1 r1 Expression.onTime(127,0,!1^1^1.)}
+		Sub{b1^1^1^1^1^1^1^1}
 }
 
 // ƒhƒ‰ƒ€
