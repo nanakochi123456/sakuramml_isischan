@@ -1,6 +1,8 @@
 ISISちゃん「Give Me Merorin by ISIL48」
 Copyright 2015 @nanakochi123456
 ================
+こちらのgithubバージョンは、公開していますが、拡散禁止です。
+
 
 http://oto.chu.jp/mmlbbs6/post.php?mml_id=1604
 
@@ -17,7 +19,9 @@ http://sourceforge.net/projects/timidity/files/
 
 TiMidiTy++のパッチセット
 http://sf2.daiba.cx/data/isischan/
+
 csakura（テキスト音楽さくら）
+http://oto.chu.jp/
 
 perl 5.8以降 (ActivePerl等も）
 http://www.activestate.com/activeperl
@@ -58,7 +62,7 @@ ISIS関係であれば、必ず「ISISちゃん」をタイトルに含めてく
 
 ただし、宗教、暴力、詐欺行為には利用しないで下さい。
 
-※ただし、音声合成ソフトのライセンスはご確認下さい。
+※音声合成ソフトのライセンスはご確認下さい。音声抜きのカラオケバージョンであれば、法人利用でもライセンスに抵触することはございません。
 
 利用に関しての承諾は不要ですが、できれば売る場合ぐらいは、@nanakochi123456 まで
 一声かけてなの。
