@@ -21,6 +21,10 @@ Int SFX=0
 Int GAKUHU=0
 Int ALL=0
 
+
+曲名{"Give Me Merorin by ISIL48"}
+作者{"@nanakochi123456"}
+
 IF(TIMIDITY=0 || ALL=1) {
 	VOCALOID=1
 	EGUITAR=1
@@ -34,11 +38,20 @@ IF(TIMIDITY=0 || ALL=1) {
 	SFX=1
 }
 
+IF(GAKUHU=1) {
+	VOCALOID=0
+	EGUITAR=0
+	BGUITAR=0
+	PIANO=0
+	ORGAN=0
+	SYNTH=0
+	BASS=0
+	VOCAL=0
+	DRUM=0
+	SFX=0
+}
 
-曲名{"Give Me Merorin by ISIL48"}
-作者{"@nanakochi123456"}
-
-IF(TIMIDITY=1 && VOCALOID==1) {
+IF((TIMIDITY=1 && VOCALOID=1) || GAKUHU=1) {
 	System.TimeBase=96
 } ELSE {
 	System.TimeBase=10368
@@ -146,7 +159,7 @@ Function BG(Str MML) {
 			ML=FM+M
 			FM=""
 		} ELSE {
-	　　　　　　R=R+"r"+Random(144,384)
+	　　　　　　R=R+"r"+Random(120,384)
 　　　　　　　　	BUF=BUF+"Sub" + CHR(123)+R+ML+CHR(125)
 	　　　　　　ML=M
 		}
@@ -174,6 +187,7 @@ Function BG(Str MML) {
 	}
 }
 
+// コード定義
 #eacp={BG(ea>c#<)}
 #eac={BG(ea>c<)}
 #egc={BG(eg>c<)}
@@ -185,7 +199,7 @@ Function BG(Str MML) {
 #fpadp={BG(f#a>d#<)}
 #gpbe={BG(g#b>e<)}
 #gbe={BG(gb>e<)}
-#gbdp={BG(g#b>d#<)}
+#gpbdp={BG(g#b>d#<)}
 #acf={BG(a>cf<)}
 #ace={BG(a>ce<)}
 #bdg={BG(b>dg<)}
@@ -198,10 +212,9 @@ Function BG(Str MML) {
 #gcf={BG(g>cf<)}
 #gcfp={BG(g>cf#<)}
 #gcg={BG(g>cg<)}
-#fgbd={BG(fgbd)}
+#fgbd={BG(fgb>d<)}
 #gbd={BG(gb>d<)}
 #abe={BG(ab>e<)}
-#gpbe={BG(#gb>e<)}
 
 // テンポ
 TR(1)
@@ -230,13 +243,21 @@ TR(1)
 		// いの　ちが　や
 		r4 c#c# c#f#4e^
 		//どるも
-		d4c#4<b4r
+		IF(GAKUHU=1) {
+			d4c#4<b4.
+		} ELSE {
+			d4c#4<b4r
+		}
 		// おひさま
 		a4.a>f#4.e
 		// にちか
 		rrrrr<ab>c#
 		//ーていくのよ
-		drc#<b4aab^2.>
+		IF(GAKUHU=1) {
+			d4c#<b4aab^2.>
+		} ELSE {
+			drc#<b4aab^2.>
+		}
 		r4
 
 		// せんにんの
@@ -246,7 +267,11 @@ TR(1)
 		// まも　て ゆ
 		r4 c#c# rf#4e^
 		//ーけば
-		d4c#4<b4r
+		IF(GAKUHU=1) {
+			d4c#4<b4.
+		} ELSE {
+			d4c#4<b4r
+		}
 		// みんなの
 		a2^a>f#e
 		// にわで
@@ -268,14 +293,21 @@ TR(1)
 		//　メロン
 		rr rb>df
 		//かじーて
-		e2f2f#4r4g4r4
-
+		IF(GAKUHU=1) {
+			e2f2f#2g2
+		} ELSE {
+			e2f2f#4r4g4r4
+		}
 		//みらいへ
 		a2f4fc
 		//   むかー
 		rrrr rcfa
 		//ーてゆく
-		g4r4a2b2>c4.r8
+		IF(GAKUHU=1) {
+			g2a2b2>c2
+		} ELSE {
+			g4r4a2b2>c4.r8
+		}
 		//いのちを
 		d2^c<b>c^2^
 		//つなげ
@@ -289,13 +321,24 @@ TR(1)
 		// あした
 		r <ef#g#
 		// のための いぽを
-		a16r16aaa a>rf#e^2
+		IF(GAKUHU=1) {
+			aaaa a>rf#e^2
+		} ELSE {
+			a16r16aaa a>rf#e^2
+		}
 		// つよく
 		r <ab>c#
-		//ふみしめて
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		// いぽまえに
-		drc#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			drc#<a4f#ar>
+		}
 		// すすんでいこ
 		d4c#<a4f#a>c#^4.
 		//ーーお
@@ -310,9 +353,17 @@ TR(1)
 		// きょうも
 		r <ab>c#
 		//いぽずーつ
-		drc#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			drc#<a4f#ar>
+		}
 		//あるいーて
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		//すすんでいこ
 		d4c<a4fa>c^2<
 		//ー
@@ -332,7 +383,11 @@ TR(1)
 		// きみがかな
 		r4 c#c# c#f#4e^
 		//えれば
-		d4c#4<b4r
+		IF(GAKUHU=1) {
+			d4c#4<b4.
+		} ELSE {
+			d4c#4<b4r
+		}
 		// オアシス
 		a4.a>f#4.e
 		// よどん
@@ -348,13 +403,21 @@ TR(1)
 		// きみがおど
 		r4 c#c# c#f#4e^
 		//れーば
-		d4c#4<b4r
+		IF(GAKUHU=1) {
+			d4c#4<b4.
+		} ELSE {
+			d4c#4<b4r
+		}
 		// せきゆが
 		a2^8a>f#e
 		// よどん
 		rrrr rc#de
 		//でいくの
-		f#2g#2a2b2
+		IF(GAKUHU=1) {
+			f#2g#2a2b2
+		} ELSE {
+			f#2g#2a2b4..r16
+		}
 	}
 	#u22={
 		//だいちの
@@ -369,14 +432,22 @@ TR(1)
 		//　せきゆ
 		rr rb>df
 		//わけあて
-		e2f2f#4r4g2
+		IF(GAKUHU=1) {
+			e2f2f#2g2
+		} ELSE {
+			e2f2f#4r4g4..r16
+		}
 
 		//みらいへ
 		a2f4fc
 		//   むかー
 		rrrr rcfa
 		//ーてゆく
-		g4r4a2b2>c2
+		IF(GAKUHU=1) {
+			g2a2b2>c2
+		} ELSE {
+			g4r4a2b2>c2
+		}
 		//へいわの
 		d2^c<b>c^2^
 		//ために
@@ -387,7 +458,11 @@ TR(1)
 	#u23={
 		l8
 		// もてるナイフで
-		araa aa>f#e^2
+		IF(GAKUHU=1) {
+			aaaa aa>f#e^2
+		} ELSE {
+			araa aa>f#e^2
+		}
 		// まるい
 		r <ef#g#
 		// メロンを わけあお
@@ -395,9 +470,17 @@ TR(1)
 		// かわい
 		r <ab>c#
 		//たのどーを
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		// あまさーで
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		// よどませてゆ
 		d4c#<a4f#a>c#^4.
 		//くーお
@@ -412,9 +495,17 @@ TR(1)
 		// きょうも
 		r <ab>c#
 		//いぽずーつ
-		drc#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			drc#<a4f#ar>
+		}
 		//あるいーて
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		//すすんでいこ
 		d4c<a4fa>c^2<
 		//ー
@@ -430,30 +521,62 @@ TR(1)
 		// いないに
 		<e f f# g#
 		// メロンを よこせ
-		aaaa a>f#4e^4.r
+		IF(GAKUHU=1) {
+			aaaa a>f#4e^2
+		} ELSE {
+			aaaa a>f#4e^4.r
+		}
 		// まるい
 		r <ab>c#
 		//メロンーを
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		// ナイフーで
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		// きてわけあお
-		drc#<a4f#a>c#^4.
+		IF(GAKUHU=1) {
+			d4c#<a4f#a>c#^4.
+		} ELSE {
+			drc#<a4f#a>c#^4.
+		}
 		//ーーよ
 		d16c#16<brrr
 
 		// ほぺがたれてる
-		araa aa>f#e^4.r
+		IF(GAKUHU=1) {
+			araa aa>f#e^2
+		} ELSE {
+			araa aa>f#e^4.r
+		}
 		// メロンの
 		<eff#g#
 		//あまさで　ほてて
-		aaaa a>f#4e^4.r
+		IF(GAKUHU=1) {
+			aaaa a>f#4e^2
+		} ELSE {
+			aaaa a>f#4e^4.r
+		}
 		// みんな
 		r <ab>c#
 		//えがおーが
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		//はじけてる
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		// しあわせそー
 		d4c<a4fa>c^4.
 		//ーーに
@@ -463,19 +586,39 @@ TR(1)
 	#u43={
 		l8
 		// みんなでなかよく
-		aaaa aa>f#e^4.r
+		IF(GAKUHU=1) {
+			aaaa aa>f#e^2
+		} ELSE {
+			aaaa aa>f#e^4.r
+		}
 		// おおきな
 		<e f f# g#
 		// メロンを たべよお
-		aaaa aa>f#e^4.r
+		IF(GAKUHU=1) {
+			aaaa aa>f#e^2
+		} ELSE {
+			aaaa aa>f#e^4.r
+		}
 		// まるい
 		r <ab>c#
 		//メロンーを
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		// ナイフーで
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		// きてわけあお
-		drc#<a4f#a>c#^4.
+		IF(GAKUHU=1) {
+			d4c#<a4f#a>c#^4.
+		} ELSE {
+			drc#<a4f#a>c#^4.
+		}
 		//ーーよ
 		d16c#16<brrr
 
@@ -488,9 +631,17 @@ TR(1)
 		// きょうも
 		r <ab>c#
 		//いぽずーつ
-		drc#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			drc#<a4f#ar>
+		}
 		//あるいーて
-		d4c#<a4f#ar>
+		IF(GAKUHU=1) {
+			d4c#<a4f#a4>
+		} ELSE {
+			d4c#<a4f#ar>
+		}
 		//すすんでいこ
 		d4c<a4fa>c^2<
 		//ー
@@ -498,6 +649,20 @@ TR(1)
 		//よ
 		a1r1
 	}
+
+IF(GAKUHU=1) {
+	TR(12)
+		v127	q100o5
+		@(AltoSax)
+		#u11
+		#u12
+		#u13
+		#u21
+		#u22
+		#u23
+		#u33
+		#u43
+}
 
 IF(VOCALOID=1) {
 	// IA
@@ -603,8 +768,8 @@ IF(EGUITAR=1) {
 		a2efg
 		Sub{p.onTime(64,50,!4) r4 p.onTime(50,64,!4)}f2fga
 		Sub{p.onTime(64,75,!4) r4 p.onTime(75,64,!4)}g2Sub{p.onTime(64,50,!4) r4 p.onTime(50,64,!4)}d2
-		Sub{p.onTime(64,45,!4) r4 p.onTime(45,64,!4)}e2^2>
-		r2r2
+		Sub{p.onTime(64,45,!4) r4 p.onTime(45,64,!4)}e1^1>
+
 		r [p.onTime(15,64,!10)c] p.onTime(30,64,!4)l2^6 BG(<f>c)
 		l6<b>cd<bg>
 		Sub{p.onTime(64,85,!4) r4 p.onTime(85,64,!4)}e2 Sub{p.onTime(64,85,!4) r4 p.onTime(85,64,!4)}d2
@@ -614,7 +779,7 @@ IF(EGUITAR=1) {
 		e2c2
 		l1^1 Sub{'<f1^1>d1'}r1 [3 l3 BG(da)]<
 //		Sub{<a1g#1>}e1^1
-		Sub{r1. Expression.onTime(127,40,!2) } l1^1 BG(eb>eb)
+		Sub{r1.r4. Expression.onTime(127,40,!8) } l1^1 BG(eb>eb)
 }
 
 // ピアノ
@@ -669,7 +834,7 @@ IF(PIANO=1) {
 	l2.	BG(c#f#a)
 	l1^4	BG(c#eg#)
 	l2 BG(df#a) l4.BG(df#a) l8^1 BG(c#ea)
-	l2 BG(df#a) BG(c#eg#) BG(df#a) BG(eg#b)
+	l2 BG(df#a) BG(beg#) BG(acf) BG(bdg)
 }
 #chord21={
 	l1^1 BG(cfa)
@@ -847,7 +1012,7 @@ IF(BGUITAR=1) {
 				#gpbe2
 			]
 			#g1 #fpad #g2 #fpad #fpac #fpad
-			#g1 #gbe #g2 #gbe #gbdp #gbe
+			#g1 #gpbe #g2 #gpbe #gpbdp #gpbe
 			#g1 #acf #g2 #acf #ace #acf
 			#g1 #bdg #g2 #bdg #bdfp #bdg
 
@@ -909,7 +1074,7 @@ IF(VOCAL=1) {
 IF(BASS=1) {
 	TR(9)
 		#b1={RandV(125,127) q95 @(PickBass)}
-		#b2={RandV(100,110) q70 @(SlapBass1)}
+		#b2={RandV(110,120) q70 @(SlapBass1)}
 		l8
 		o4
 		#b1
@@ -1057,42 +1222,42 @@ IF(DRUM=1) {
 	TR(10)
 		#INIT
 		Voice(1)
-		$k{Sub{RandR(999,1728) RandV(124,127) n(Sticks),16}r} //37
-		$B{Sub{RandR(999,1728) RandV(124,127) n(Kick2),16}r}//35
-		$b{Sub{RandR(999,1728) RandV(124,127) n(Kick1),16}r}//36
-		$S{Sub{RandR(999,1728) RandV(120,127) n(Snare2),16}r}//40
-		$s{Sub{RandR(999,1728) RandV(120,127) n(Snare1),16}r}//38
-		$L{Sub{RandR(999,1728) RandV(123,127) n(LowTom2),16}r}//41
-		$l{Sub{RandR(999,1728) RandV(123,127) n(LowTom1),16}r}//43
-		$M{Sub{RandR(999,1728) RandV(123,127) n(MidTom2),16}r}//45
-		$m{Sub{RandR(999,1728) RandV(123,127) n(MidTom1),16}r}//47
-		$T{Sub{RandR(999,1728) RandV(123,127) n(HighTom2),16}r}//48
-		$t{Sub{RandR(999,1728) RandV(123,127) n(HighTom1),16}r}//50
-		$p{Sub{RandR(999,1728) RandV(110,127) n(PedalHiHat),16}r}//44
-		$h{Sub{RandR(999,1728) RandV( 65, 80) n(ClosedHiHat),16}r}//42
-		$o{Sub{RandR(999,1728) RandV( 90,110) n(OpenHiHat),16}r}//46
-		$r{Sub{RandR(999,1728) RandV(100,110) n(RideCymbal1),16}r}//51
-		$R{Sub{RandR(999,1728) RandV(120,127) n(RideBell),16}r}//53
+		$k{Sub{RandR(800,1536) RandV(124,127) n(Sticks),16}r} //37
+		$B{Sub{RandR(800,1536) RandV(124,127) n(Kick2),16}r}//35
+		$b{Sub{RandR(800,1536) RandV(124,127) n(Kick1),16}r}//36
+		$S{Sub{RandR(800,1536) RandV(120,127) n(Snare2),16}r}//40
+		$s{Sub{RandR(800,1536) RandV(120,127) n(Snare1),16}r}//38
+		$L{Sub{RandR(800,1536) RandV(123,127) n(LowTom2),16}r}//41
+		$l{Sub{RandR(800,1536) RandV(123,127) n(LowTom1),16}r}//43
+		$M{Sub{RandR(800,1536) RandV(123,127) n(MidTom2),16}r}//45
+		$m{Sub{RandR(800,1536) RandV(123,127) n(MidTom1),16}r}//47
+		$T{Sub{RandR(800,1536) RandV(123,127) n(HighTom2),16}r}//48
+		$t{Sub{RandR(800,1536) RandV(123,127) n(HighTom1),16}r}//50
+		$p{Sub{RandR(800,1536) RandV(110,127) n(PedalHiHat),16}r}//44
+		$h{Sub{RandR(800,1536) RandV( 65, 80) n(ClosedHiHat),16}r}//42
+		$o{Sub{RandR(800,1536) RandV( 90,110) n(OpenHiHat),16}r}//46
+		$r{Sub{RandR(800,1536) RandV(100,110) n(RideCymbal1),16}r}//51
+		$R{Sub{RandR(800,1536) RandV(120,127) n(RideBell),16}r}//53
 		// Ride cup
-		$i{Sub{RandR(999,1728) RandV( 85,95)  n(MuteHighConga),16}r}//62
-		$I{Sub{RandR(999,1728) RandV(120,127) n(OpenHighConga),16}r}//63
-		$C{Sub{RandR(999,1728) RandV(120,127) n(Cymbal()),16}r}//49
-		$c{Sub{RandR(999,1728) RandV(120,127) n(Splash()),16}r}//49
+		$i{Sub{RandR(800,1536) RandV( 85,95)  n(MuteHighConga),16}r}//62
+		$I{Sub{RandR(800,1536) RandV(120,127) n(OpenHighConga),16}r}//63
+		$C{Sub{RandR(800,1536) RandV(120,127) n(Cymbal()),16}r}//49
+		$c{Sub{RandR(800,1536) RandV(120,127) n(Splash()),16}r}//49
 
 		// alt cymbal
-		$y{Sub{RandR(999,1728) RandV(120,127) n(HighBongo),16}r}//60
-		$Y{Sub{RandR(999,1728) RandV(120,127) n(LowBongo),16}r}//6 
+		$y{Sub{RandR(800,1536) RandV(120,127) n(HighBongo),16}r}//60
+		$Y{Sub{RandR(800,1536) RandV(120,127) n(LowBongo),16}r}//6 
 
 		// BellTree
-		$Z{Sub{RandR(999,1728) RandV(125,127) n(BellTree),16}r}//6 
-		$z{Sub{RandR(999,1728) RandV(125,127) n(JingleBell),16}r}//6 
-		$a{Sub{RandR(999,1728) RandV(125,127) n(85),16}r}//6 
+		$Z{Sub{RandR(800,1536) RandV(125,127) n(BellTree),16}r}//6 
+		$z{Sub{RandR(800,1536) RandV(125,127) n(JingleBell),16}r}//6 
+		$a{Sub{RandR(800,1536) RandV(125,127) n(85),16}r}//6 
 
 		// water
-		$A{Sub{RandR(999,1728) RandV(126,127) n(86),1^1^1^1^1^1}r}//6 
+		$A{Sub{RandR(800,1536) RandV(126,127) n(86),1^1^1^1^1^1}r}//6 
 
 		// Wind
-		$D{Sub{RandR(999,1728) RandV(126,127) n(87),1^1^1^1^1^1}r}//6 
+		$D{Sub{RandR(800,1536) RandV(126,127) n(87),1^1^1^1^1^1}r}//6 
 
 		[8 r1]
 
