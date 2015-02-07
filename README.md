@@ -55,7 +55,7 @@ masterにあるバージョンは利用禁止です。
 ブランチを作成いたしますので、そちらは利用可能です。
 
 URLは、以下等で・・
-https://github.com/nanakochi123456/sakuramml_isischan/tree/1.0
+https://github.com/nanakochi123456/sakuramml_isischan/tree/1.1
 
 ISIS撲滅、平和関係等であれば何に使用しても構いません。
 
@@ -85,7 +85,7 @@ http://www.nicovideo.jp/watch/sm25500629
 http://www.nicovideo.jp/watch/sm25456647
 
 ■素材
-https://github.com/nanakochi123456/sakuramml_isischan/tree/1.0/bin
+https://github.com/nanakochi123456/sakuramml_isischan/tree/1.1/bin
 
 bin 内に、フルバージョン、カラオケバージョンがあります。
 
