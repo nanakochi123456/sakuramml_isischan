@@ -1,6 +1,7 @@
 // #ISISクソコラグランプリ
 // #ISISちゃん　テーマ曲
 // ギブミーメロリン title by @minamino48
+// version 1.2
 // by @nanakochi123456
 // 参考歌詞 アイシスちゃんのテーマ @kusakaiza913
 // 動画、添削 by @isisvipper
@@ -8,6 +9,7 @@
 Tempo 240
 
 Int TIMIDITY=0
+Int MA7=0
 Int VOCALOID=0
 Int EGUITAR=0
 Int BGUITAR=0
@@ -20,10 +22,15 @@ Int DRUM=0
 Int SFX=0
 Int GAKUHU=0
 Int ALL=0
+Int NODTM=1
 
-
-曲名{"Give Me Merorin by ISIL48"}
-作者{"@nanakochi123456"}
+IF(MA7=1) {
+	曲名{"Give Me Merorin"}
+	作者{"ぱぷぅ"}
+} ELSE {
+	曲名{"Give Me Merorin by ISIL48"}
+	作者{"@nanakochi123456"}
+}
 
 IF(TIMIDITY=0 || ALL=1) {
 	VOCALOID=1
@@ -57,11 +64,34 @@ IF((TIMIDITY=1 && VOCALOID=1) || GAKUHU=1) {
 	System.TimeBase=10368
 }
 
-Expression.Frequency(1);
-Modulation.Frequency(1);
+IF(MA7=1) {
+	System.TimeBase=96
+}
+
+IF(MA7=1) {
+	Expression.Frequency(6);
+	Modulation.Frequency(6);
+} ELSE {
+	Expression.Frequency(1);
+	Modulation.Frequency(1);
+}
 
 #PEDALON={Sub {r16y64,127}}
 #PEDALOFF={r-32 y64,0 r32}
+
+Function VO(Int VV) {
+	IF(MA7=1) {
+		@(VV,124,2)
+	} ELSE {
+		@(VV)
+	}
+}
+
+Function MO(Int VAL, Int LEN) {
+	IF(MA7=1) {
+		M.onTime(0,VAL,LEN)
+	}
+}
 
 // シンバルのロテート
 Int CYMINIT=0
@@ -85,24 +115,32 @@ Function Snare() {
 
 Function Cymbal() {
 	Int CC
-	IF(CYMINIT=0) {
-		CC=CrashCymbal1
-		CYMINIT=1
+	IF(MA7=0) {
+		IF(CYMINIT=0) {
+			CC=CrashCymbal1
+			CYMINIT=1
+		} ELSE {
+			CC=CrashCymbal2
+			CYMINIT=0
+		}
 	} ELSE {
-		CC=CrashCymbal2
-		CYMINIT=0
+		CC=CrashCymbal1
 	}
 	Result=CC
 }
 
 Function Splash() {
 	Int CC
-	IF(CYMINIT=0) {
-		CC=SplashCymbal
-		CYMINIT=1
+	IF(MA7=0) {
+		IF(CYMINIT=0) {
+			CC=SplashCymbal
+			CYMINIT=1
+		} ELSE {
+			CC=ChineseCymbal
+			CYMINIT=0
+		}
 	} ELSE {
-		CC=ChineseCymbal
-		CYMINIT=0
+		CC=SplashCymbal
 	}
 	Result=CC
 }
@@ -110,14 +148,18 @@ Function Splash() {
 
 Function RandV(Int MIN, Int MAX) {
 	Str MML="v"
-	MML=MML+Random(MIN,MAX)
+	IF(MA7=1) {
+		MML=MML+#STR(MAX)
+	} ELSE {
+		MML=MML+Random(MIN,MAX)
+	}
 	MML
 }
 
 Str RMML
 Function RandR(Int MIN, Int MAX) {
 	Str MML
-	IF(NODTM=1) {
+	IF(NODTM=1 && MA7=0) {
 		MML=MML+"r"
 		RMML=RMML+"r"
 		Int VALUE=Random(0,10)
@@ -159,7 +201,9 @@ Function BG(Str MML) {
 			ML=FM+M
 			FM=""
 		} ELSE {
-	　　　　　　R=R+"r"+Random(120,384)
+			IF(MA7=0) {
+		　　　　　　R=R+"r"+Random(120,384)
+			}
 　　　　　　　　	BUF=BUF+"Sub" + CHR(123)+R+ML+CHR(125)
 	　　　　　　ML=M
 		}
@@ -653,7 +697,7 @@ TR(1)
 IF(GAKUHU=1) {
 	TR(12)
 		v127	q100o5
-		@(AltoSax)
+		VO(AltoSax)
 		#u11
 		#u12
 		#u13
@@ -664,13 +708,56 @@ IF(GAKUHU=1) {
 		#u43
 }
 
-IF(VOCALOID=1) {
+IF(MA7=1) {
+	TR(11)
+		#INIT
+		o5
+		q97
+		VO(AltoSax)
+		v127
+		[14 r1]
+
+		Expression(127)
+		#u11
+		#u12
+		#u13
+
+		#u21
+		#u22
+		#u23
+		[16 r1]
+		#u33
+		#u43
+
+	TR(12)
+		#INIT
+		o6
+		q97
+		VO(SquareLead)
+		v127
+		M(60)
+		[14 r1]
+
+		Expression(127)
+		#u11
+		#u12
+		#u13
+
+		#u21
+		#u22
+		#u23
+		[16 r1]
+		#u33
+		#u43
+}
+
+IF(VOCALOID=1 && MA7=0) {
 	// IA
 	TR(11)
 		#INIT
 		o5
 		q97
-		@(AltoSax)
+		VO(AltoSax)
 		v127
 		[14 r1]
 
@@ -694,7 +781,7 @@ IF(VOCALOID=1) {
 		#INIT
 		o5
 		q100
-		@(AltoSax)
+		VO(TenorSax)
 		v127
 		[14 r1]
 
@@ -716,7 +803,7 @@ IF(VOCALOID=1) {
 	TR(13)
 		#INIT
 		q97
-		@(Violin)
+		VO(SopranoSax)
 		v127
 		o5
 		[14 r1]
@@ -737,7 +824,7 @@ IF(VOCALOID=1) {
 	TR(14)
 		#INIT
 		q98
-		@(Trombone)
+		VO(Trombone)
 		v127
 		o4
 		[14 r1]
@@ -757,28 +844,33 @@ IF(EGUITAR=1) {
 	TR(2)
 		#INIT
 		[114 r1]
-		@(OverdrivenGuitar)
+		VO(OverdrivenGuitar)
 		PitchBendSensitivity(1)
 		o7q99v127
 		l6
-		r [p.onTime(15,64,!10)c] p.onTime(30,64,!4)l2^6 BG(<f>c)
+		MO(0,!99)
+		r [p.onTime(15,64,!10)c] p.onTime(30,64,!4)l2^6 MO(50,!4) BG(<f>c)
 		l6
+		MO(0,!99)
 		<b>cd<bg
-		Sub{p.onTime(64,80,!4) r4 p.onTime(80,64,!4.)}g2^gb-
+		Sub{p.onTime(64,80,!4) r4 p.onTime(80,64,!4.)} MO(50,!4) g2^g MO(0,!99) b-
 		a2efg
-		Sub{p.onTime(64,50,!4) r4 p.onTime(50,64,!4)}f2fga
+		Sub{p.onTime(64,50,!4) r4 p.onTime(50,64,!4)}MO(50,!4) f2 MO(0,!99) fga
 		Sub{p.onTime(64,75,!4) r4 p.onTime(75,64,!4)}g2Sub{p.onTime(64,50,!4) r4 p.onTime(50,64,!4)}d2
-		Sub{p.onTime(64,45,!4) r4 p.onTime(45,64,!4)}e1^1>
+		Sub{p.onTime(64,45,!4) r4 p.onTime(45,64,!4)}MO(70,!2)e1^1>
 
-		r [p.onTime(15,64,!10)c] p.onTime(30,64,!4)l2^6 BG(<f>c)
+		MO(0,!99)r [p.onTime(15,64,!10)c] p.onTime(30,64,!4)l2^6 MO(50,!4) BG(<f>c)
+		MO(0,!99)
 		l6<b>cd<bg>
-		Sub{p.onTime(64,85,!4) r4 p.onTime(85,64,!4)}e2 Sub{p.onTime(64,85,!4) r4 p.onTime(85,64,!4)}d2
-		c2<ab>c
+		Sub{p.onTime(64,85,!4) r4 p.onTime(85,64,!4)}MO(20,!4)e2 Sub{p.onTime(64,85,!4) r4 p.onTime(85,64,!4)}MO(20,!4)d2
+		MO(20,!4)c2< MO(0,!99) ab>c
 		
-		d2def
-		e2c2
+		MO(20,!4)d2 MO(0,!99) def
+		MO(20,!4)e2 MO(20,!2) c2
+		MO(70,!2)
 		l1^1 Sub{'<f1^1>d1'}r1 [3 l3 BG(da)]<
 //		Sub{<a1g#1>}e1^1
+		MO(70,!2)
 		Sub{r1.r4. Expression.onTime(127,40,!8) } l1^1 BG(eb>eb)
 }
 
@@ -786,6 +878,7 @@ IF(EGUITAR=1) {
 
 IF(PIANO=1) {
 	TR(3)
+		IF(MA7=1) { q100 }
 		o5
 		l2^8 BG(f#a>c#<) f#8a8>c#8<
 		l2.BG(eg#b)r4
@@ -897,7 +990,7 @@ IF(ORGAN=1) {
 		v70
 		[14 r1]
 		o6q100
-		@(RockOrgan)
+		VO(RockOrgan)
 		#chord11
 		#chord12
 
@@ -940,7 +1033,7 @@ IF(SYNTH=1) {
 	TR(5)
 		#INIT
 		v70
-		@(Strings1)
+		VO(Strings1)
 		[4 r1]
 		IF(TIMIDITY=1) {
 			r-20
@@ -971,9 +1064,14 @@ IF(BGUITAR=1) {
 	TR(4)
 		#INIT
 		l8o4
-		#g1={q80 RandV(60,65) @(JazzGuitar)}
-		#g2={q50 RandV(50,65) @(MutedGuitar)}
-
+		IF(MA7=1) {
+ 			VO(JazzGuitar)
+ 			#g1={q80 RandV(60,65)}
+			#g2={q50 RandV(50,65)}
+		} ELSE {
+			#g1={q80 RandV(60,65) VO(JazzGuitar)}
+			#g2={q50 RandV(50,65) VO(MutedGuitar)}
+		}
 		#eacp1={#g1 #eacp [#g2 #eacp] #g1 #eacp [#g2 #eacp] #g1 #eacp #g2 #eacp}
 		#eacp2={[#g2 #eacp] #g1 #eacp [#g2 #eacp] #g1 #eacp [#g2 #eacp]}
 
@@ -1052,7 +1150,7 @@ IF(VOCAL=1) {
 		IF(TIMIDITY=1) {
 			r-16
 		}
-		@(ChoirAahs)
+		VO(ChoirAahs)
 		[
 			Expression(127)
 			[16 r1]
@@ -1073,8 +1171,8 @@ IF(VOCAL=1) {
 
 IF(BASS=1) {
 	TR(9)
-		#b1={RandV(125,127) q95 @(PickBass)}
-		#b2={RandV(110,120) q70 @(SlapBass1)}
+		#b1={RandV(125,127) q95 VO(PickBass)}
+		#b2={RandV(110,120) q70 VO(SlapBass1)}
 		l8
 		o4
 		#b1
@@ -1187,19 +1285,19 @@ IF(BASS=1) {
 }
 
 // SFX
-IF(SFX=1) {
+IF(SFX=1 && MA7=0) {
 	TR(15)
 		#INIT
 		Sub {
 			v40o5q100
-			@(125)
+			VO(125)
 			Sub{Expression.onTime(0,127,!1.) r1 r1 Expression.onTime(127,0,!1^1^1^1)}
 			Sub{r4 c1^1^1^1^1}
 		}
 		[10 r1]
 		v70o7q100
 		PitchBendSensitivity(12)
-		@(126)
+		VO(126)
 		p.onTime(127,0,!1^1^1^1^1^1)
 		Sub{Expression.onTime(0,127,!1^1.) r1 r1 r1 Expression.onTime(127,0,!1^1^1.)}
 		Sub{b1^1^1^1^1^1}
@@ -1210,7 +1308,7 @@ IF(SFX=1) {
 		[4 r1]
 		v127o5q100
 		PitchBendSensitivity(12)
-		@(127)
+		VO(127)
 		p.onTime(127,0,!1^1^1^1^1^1)
 		Sub{Expression.onTime(0,127,!1^1.) r1 r1 r1 r1 Expression.onTime(127,0,!1^1^1.)}
 		Sub{b1^1^1^1^1^1^1^1}
@@ -1221,12 +1319,21 @@ IF(SFX=1) {
 IF(DRUM=1) {
 	TR(10)
 		#INIT
-		Voice(1)
+		IF(MA7=1) {
+			@(3,125)
+		} ELSE {
+			@(1)
+		}
 		$k{Sub{RandR(800,1536) RandV(124,127) n(Sticks),16}r} //37
 		$B{Sub{RandR(800,1536) RandV(124,127) n(Kick2),16}r}//35
 		$b{Sub{RandR(800,1536) RandV(124,127) n(Kick1),16}r}//36
-		$S{Sub{RandR(800,1536) RandV(120,127) n(Snare2),16}r}//40
-		$s{Sub{RandR(800,1536) RandV(120,127) n(Snare1),16}r}//38
+		IF(MA7=1) {
+			$S{Sub{RandR(800,1536) RandV(120,127) n(31),16}r}//40
+			$s{Sub{RandR(800,1536) RandV(120,127) n(31),16}r}//38
+		} ELSE {
+			$S{Sub{RandR(800,1536) RandV(120,127) n(Snare2),16}r}//40
+			$s{Sub{RandR(800,1536) RandV(120,127) n(Snare1),16}r}//38
+		}
 		$L{Sub{RandR(800,1536) RandV(123,127) n(LowTom2),16}r}//41
 		$l{Sub{RandR(800,1536) RandV(123,127) n(LowTom1),16}r}//43
 		$M{Sub{RandR(800,1536) RandV(123,127) n(MidTom2),16}r}//45
@@ -1261,7 +1368,7 @@ IF(DRUM=1) {
 
 		[8 r1]
 
-		r2  Expression(127) Rythm{a2} r2r8Rythm{t8m8l8}
+		r2  Expression(127) IF(MA7=1) { r2 } ELSE { Rythm{a2}} r2r8Rythm{t8m8l8}
 
 		#r01={
 			Sub{Rythm{[8 h8]}}
@@ -1346,10 +1453,10 @@ IF(DRUM=1) {
 		Sub{Rythm{[15 r2]}}
 		#r11 [6 #r12] #r14 #r12 #r15
 
-		Rythm{z1}
+		IF(MA7=0) { Sub{Rythm{z1}} }
+		[8 r1]
+		IF(MA7=0) { Sub{Rythm{Z1}} }
 		[7 r1]
-		Rythm{Z1}
-		[6 r1]
 		r2 Rythm{t8m8l8L8}
 
 		Sub{Rythm{C1}}
