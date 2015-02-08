@@ -9,7 +9,7 @@
 Tempo 240
 
 Int TIMIDITY=0
-Int MA7=0
+Int MA7=1
 Int VOCALOID=0
 Int EGUITAR=0
 Int BGUITAR=0
@@ -23,6 +23,7 @@ Int SFX=0
 Int GAKUHU=0
 Int ALL=0
 Int NODTM=1
+Int SHORT=1
 
 IF(MA7=1) {
 	曲名{"Give Me Merorin"}
@@ -221,12 +222,14 @@ Function BG(Str MML) {
 
 // トラックの最初が省略されないようにする
 #INIT={
-	Sub {
-		IF(GAKUHU=0) {
-			@128
-			Expression(1)
-			v1o1c1
-			Expression(127)
+	IF(MA7=0) {
+		Sub {
+			IF(GAKUHU=0) {
+				@128
+				Expression(1)
+				v1o1c1
+				Expression(127)
+			}
 		}
 	}
 }
@@ -261,21 +264,23 @@ Function BG(Str MML) {
 #abe={BG(ab>e<)}
 
 // テンポ
-TR(1)
-	[163 r1]
-	[32
-		Tempo=Tempo-2
-		r32
-	]
-	Tempo 100
-	r1
-	Tempo 140
-	[6
-		Tempo=Tempo-10
-		r6
-	]
-	r1
-	Tempo 160
+IF(SHORT=0) {
+	TR(1)
+		[163 r1]
+		[32
+			Tempo=Tempo-2
+			r32
+		]
+		Tempo 100
+		r1
+		Tempo 140
+		[6
+			Tempo=Tempo-10
+			r6
+		]
+		r1
+		Tempo 160
+}
 
 // メロディー
 	#u11={
@@ -715,19 +720,25 @@ IF(MA7=1) {
 		q97
 		VO(AltoSax)
 		v127
-		[14 r1]
+		IF(SHORT=1) {
+			#u13
+			#u11
+			#u12
+		} ELSE {
+			[14 r1]
 
-		Expression(127)
-		#u11
-		#u12
-		#u13
+			Expression(127)
+			#u11
+			#u12
+			#u13
 
-		#u21
-		#u22
-		#u23
-		[16 r1]
-		#u33
-		#u43
+			#u21
+			#u22
+			#u23
+			[16 r1]
+			#u33
+			#u43
+		}
 
 	TR(12)
 		#INIT
@@ -736,19 +747,25 @@ IF(MA7=1) {
 		VO(SquareLead)
 		v127
 		M(60)
-		[14 r1]
+		IF(SHORT=1) {
+			#u13
+			#u11
+			#u12
+		} ELSE {
+			[14 r1]
 
-		Expression(127)
-		#u11
-		#u12
-		#u13
+			Expression(127)
+			#u11
+			#u12
+			#u13
 
-		#u21
-		#u22
-		#u23
-		[16 r1]
-		#u33
-		#u43
+			#u21
+			#u22
+			#u23
+			[16 r1]
+			#u33
+			#u43
+		}
 }
 
 IF(VOCALOID=1 && MA7=0) {
@@ -840,7 +857,7 @@ IF(VOCALOID=1 && MA7=0) {
 
 // サビのギター
 
-IF(EGUITAR=1) {
+IF(EGUITAR=1 && SHORT=0) {
 	TR(2)
 		#INIT
 		[114 r1]
@@ -876,7 +893,7 @@ IF(EGUITAR=1) {
 
 // ピアノ
 
-IF(PIANO=1) {
+IF(PIANO=1 && SHORT=0) {
 	TR(3)
 		IF(MA7=1) { q100 }
 		o5
@@ -988,25 +1005,36 @@ IF(ORGAN=1) {
 	TR(6)
 		#INIT
 		v70
-		[14 r1]
 		o6q100
 		VO(RockOrgan)
-		#chord11
-		#chord12
+		IF(SHORT=1) {
+			#chord31
+			l1^1^1^1 BG(ea>c#<)
 
-		#chord21
+			#chord11
+			#chord12
 
-		#chord31
-		l1^1^1^1 BG(ea>c#<)
+			#chord21
 
-		#chord11
-		#chord12
-		#chord21
-		#chord31
-		[34 r1]
-		o6 #g1
-		#chord31
-		#chord61
+		} ELSE {
+			[14 r1]
+			#chord11
+			#chord12
+
+			#chord21
+
+			#chord31
+			l1^1^1^1 BG(ea>c#<)
+
+			#chord11
+			#chord12
+			#chord21
+			#chord31
+			[34 r1]
+			o6 #g1
+			#chord31
+			#chord61
+		}
 }
 
 // ストリング
@@ -1034,28 +1062,34 @@ IF(SYNTH=1) {
 		#INIT
 		v70
 		VO(Strings1)
-		[4 r1]
 		IF(TIMIDITY=1) {
 			r-20
 		}
 		o6q100
-		Sub{f#1^1^1^1}r1r1a1^1
-		'e1^1g#1^1b1^1'
-		Sub{r1r1Expression.onTime(127,60,!1^2.)}
-		l1'>c#^^^2.<e^^^2.a^^^2.' r4
-		[
-			Expression(127)
-			[32 r1]
+		IF(SHORT=1) {
 			#chord32
-			:
 			Sub{r1r1Expression.onTime(127,40,!1^2.)}
 			l1^1^1^2. BG(ea>c#) r4
-		]
-		Expression(127)
-		#chord52
-		#chord32
-		#chord32
-		#chord61
+		} ELSE {
+			[4 r1]
+			Sub{f#1^1^1^1}r1r1a1^1
+			'e1^1g#1^1b1^1'
+			Sub{r1r1Expression.onTime(127,60,!1^2.)}
+			l1'>c#^^^2.<e^^^2.a^^^2.' r4
+			[
+				Expression(127)
+				[32 r1]
+				#chord32
+				:
+				Sub{r1r1Expression.onTime(127,40,!1^2.)}
+				l1^1^1^2. BG(ea>c#) r4
+			]
+			Expression(127)
+			#chord52
+			#chord32
+			#chord32
+			#chord61
+		}
 }
 
 // バックギター
@@ -1096,10 +1130,15 @@ IF(BGUITAR=1) {
 		#egpd1={#g1 #egpd [#g2 #egpd] #g1 #egpd [#g2 #egpd] #g1 #egpd #g2 #egpd}
 		#egpd2={[#g2 #egpd] #g1 #egpd [#g2 #egpd] #g1 #egpd [#g2 #egpd]}
 
-		[10 r1]
-		[#eacp1 #eacp2]
-		[
+		IF(SHORT=1) {
 			l8
+			//3
+			o5 #g1
+			#chord31
+
+			l8[#eacp1 #eacp2]
+			<
+
 			//1
 			[
 				#eacp3 #egb2
@@ -1126,17 +1165,49 @@ IF(BGUITAR=1) {
 			#gbe1 #ace2
 			#fad1 #fad2
 			#egpd1 #egpd2
+		} ELSE {
+			[10 r1]
+			[#eacp1 #eacp2]
+			[
+				l8
+				//1
+				[
+					#eacp3 #egb2
+					#fpac3 #egpcp2
+					#fpad1 #eacp2
+					:
+					#g1 #fpad #g2 #fpad #g1 #fpac #fpad #g2 #fpad #g1 #fpadp #g2 #fpadp #g1 #gpbe
+					#gpbe2
+				]
+				#g1 #fpad #g2 #fpad #fpac #fpad
+				#g1 #gpbe #g2 #gpbe #gpbdp #gpbe
+				#g1 #acf #g2 #acf #ace #acf
+				#g1 #bdg #g2 #bdg #bdfp #bdg
 
-			//3
+				//2
+				#acf1 #acf2
+				#gbe1 #ace2
+				#fad1 #egpd2
+				#g1 #gce #g2 #gce #gcdp #gce
+				#g1 #gcf #g2 #gcf #gce #gcf
+				#g1 #gcfp #g2 #gcfp #gcf #gcfp
+				#g1 #gcg #g2 #gcg #gcfp #gcg
+				#acf1 #acf2
+				#gbe1 #ace2
+				#fad1 #fad2
+				#egpd1 #egpd2
+
+				//3
+				o5 #g1
+				#chord31
+				:
+				l8[#eacp1 #eacp2]
+				<
+			]
+			[34 r1]
 			o5 #g1
 			#chord31
-			:
-			l8[#eacp1 #eacp2]
-			<
-		]
-		[34 r1]
-		o5 #g1
-		#chord31
+		}
 }
 
 // コーラス
@@ -1144,27 +1215,38 @@ IF(BGUITAR=1) {
 IF(VOCAL=1) {
 	TR(7)
 		#INIT
-		[14 r1]
 		v65
 		o5q100
 		IF(TIMIDITY=1) {
 			r-16
 		}
 		VO(ChoirAahs)
-		[
+		IF(SHORT=1) {
+			Expression(127)
+			#chord32
+			Sub{r1r1Expression.onTime(127,40,!1^2.)}
+			l1^1^1^2. BG(ea>c#) r4
+
 			Expression(127)
 			[16 r1]
 			#chord21
+		} ELSE {
+			[14 r1]
+			[
+				Expression(127)
+				[16 r1]
+				#chord21
+				#chord32
+				:
+				Sub{r1r1Expression.onTime(127,40,!1^2.)}
+				l1^1^1^2. BG(ea>c#) r4
+			]
+			Expression(127)
+			#chord52
 			#chord32
-			:
-			Sub{r1r1Expression.onTime(127,40,!1^2.)}
-			l1^1^1^2. BG(ea>c#) r4
-		]
-		Expression(127)
-		#chord52
-		#chord32
-		#chord32
-		#chord61
+			#chord32
+			#chord61
+		}
 }
 
 // ベース
@@ -1175,17 +1257,25 @@ IF(BASS=1) {
 		#b2={RandV(110,120) q70 VO(SlapBass1)}
 		l8
 		o4
-		#b1
-		d1^4 <b4.>c4.
-		c#1
-		<f#4>f#4.e4.
-		<
-		b4.>c#2 d2 d#2 <e8^1^4
-		 >e4.<b4.
-		e1^4> #b2 e rr< #b1 eee
+		IF(SHORT=1) {
+			// 3
+			<<
+			[
+				#b1 a4.a > #b2 a4. <#b1 a
+				#b1 g#4.g# > #b2 g#4. <#b1 g#
+				#b1 f#4.f# > #b2 f#4. <#b1 f#
+				#b1 e4.e > #b2 e4. <#b1 e
+				>
+				#b1 d4.d > #b2 d4. <#b1 d
+				#b1 c#4.c# > #b2 c#4. <#b1 c#
+				<
+				:
+				#b1 b4.b > #b2 b4. <#b1 b
+				#b1 e4.e > #b2 e <#b1 eee
+			]
+			#b1 f4.f > #b2 f4. <#b1 f
+			f2g2
 
-		<
-		[
 			//1
 			#b1 a4.a rr> #b2 ar<
 			#b1 rrar ra4.
@@ -1216,76 +1306,118 @@ IF(BASS=1) {
 			rrbr >#b1 rb4.
 			#b1 e4. <#b1 e > #b2 re < #b1 re
 			rrer >#b2 reee<
+		} ELSE {
+			#b1
+			d1^4 <b4.>c4.
+			c#1
+			<f#4>f#4.e4.
+			<
+			b4.>c#2 d2 d#2 <e8^1^4
+			 >e4.<b4.
+			e1^4> #b2 e rr< #b1 eee
 
-			//3
+			<
 			[
-				#b1 a4.a > #b2 a4. <#b1 a
-				#b1 g#4.g# > #b2 g#4. <#b1 g#
-				#b1 f#4.f# > #b2 f#4. <#b1 f#
-				#b1 e4.e > #b2 e4. <#b1 e
-				>
-				#b1 d4.d > #b2 d4. <#b1 d
-				#b1 c#4.c# > #b2 c#4. <#b1 c#
-				<
-				:
-				#b1 b4.b > #b2 b4. <#b1 b
-				#b1 e4.e > #b2 e <#b1 eee
+				//1
+				#b1 a4.a rr> #b2 ar<
+				#b1 rrar ra4.
+				#b1 a4.a rr> #b2 ar<
+				#b1 rrar reee
+
+				[
+					#b1 a4.a > #b2 ra rr < #b1 rrg#r rg#4.
+					#b1 f#4.f# > #b2 rf# rr #b1 rrc#r rc#4.
+					#b1 d4.d rdrd rrc#r #b2 rf# #b1 <rf#
+					:
+					#b1 b4>c#d rd#re #b2 rrer #b1 <reee
+				]
+				#b1 b4a#b >c#4<b>c# d4c#d e4 d#e
+
+				//2
+				[
+					#b1 f4. <#b1 f > #b2 rf < #b1 rf
+					rrfr >#b1 rf4.
+					#b1 e4. <#b1 e > #b2 re < #b1 re
+					rrar >#b1 ra4.<
+					#b1 b4. #b1 b > #b2 rb < #b1 rb
+					:
+					rrer >#b1 re4.
+					c4<b>c c#4cc#
+					d4c#d e4d#e
+				]
+				rrbr >#b1 rb4.
+				#b1 e4. <#b1 e > #b2 re < #b1 re
+				rrer >#b2 reee<
+
+				//3
+				[
+					#b1 a4.a > #b2 a4. <#b1 a
+					#b1 g#4.g# > #b2 g#4. <#b1 g#
+					#b1 f#4.f# > #b2 f#4. <#b1 f#
+					#b1 e4.e > #b2 e4. <#b1 e
+					>
+					#b1 d4.d > #b2 d4. <#b1 d
+					#b1 c#4.c# > #b2 c#4. <#b1 c#
+					<
+					:
+					#b1 b4.b > #b2 b4. <#b1 b
+					#b1 e4.e > #b2 e <#b1 eee
+				]
+				#b1 f4.f > #b2 f4. <#b1 f
+				f2g2
 			]
-			#b1 f4.f > #b2 f4. <#b1 f
-			f2g2
-		]
 
-		#b1 f4.f > #b2 rf <#b1 rg
-		r4 #b2 > g4 < #b1 r g4.
-		#b1 e4.e > #b2 re <#b1 re
-		r4 #b2 > a4 < #b1 r a4.
-		#b1 d4.d > #b2 rd <#b1 rg
-		r4 #b2 > g4 < #b1 r g4.
-//		> c4<b>c c#4cc# d4c#d e4d#e<
-		#b1 >c4.> #b2 c<< #b1 b4.> #b2 b< #b1 a4.> #b2 a< #b1 g4.>#b2 g<
+			#b1 f4.f > #b2 rf <#b1 rg
+			r4 #b2 > g4 < #b1 r g4.
+			#b1 e4.e > #b2 re <#b1 re
+			r4 #b2 > a4 < #b1 r a4.
+			#b1 d4.d > #b2 rd <#b1 rg
+			r4 #b2 > g4 < #b1 r g4.
+	//		> c4<b>c c#4cc# d4c#d e4d#e<
+			#b1 >c4.> #b2 c<< #b1 b4.> #b2 b< #b1 a4.> #b2 a< #b1 g4.>#b2 g<
 
-		#b1 f4.f > #b2 rf <#b1 rg
-		r4 #b2 > g4 < #b1 r g4.>
-		#b1 c4.>#b2 c <<#b1 b4. >#b2 a<
-		#b1 a4. a > #b2 ra <#b1 ra
-		#b1 d4.d > #b2 rd <#b1 rd
-		r4 #b2 > d4 < #b1 r d4.
-		#b1 b4.b > #b2 rb <#b1 rb
-		r4 #b2 > b4 < #b1 r b4.
-		#b1 e4.e > #b2 re <#b1 re
-		r4 er >e<bg#e
+			#b1 f4.f > #b2 rf <#b1 rg
+			r4 #b2 > g4 < #b1 r g4.>
+			#b1 c4.>#b2 c <<#b1 b4. >#b2 a<
+			#b1 a4. a > #b2 ra <#b1 ra
+			#b1 d4.d > #b2 rd <#b1 rd
+			r4 #b2 > d4 < #b1 r d4.
+			#b1 b4.b > #b2 rb <#b1 rb
+			r4 #b2 > b4 < #b1 r b4.
+			#b1 e4.e > #b2 re <#b1 re
+			r4 er >e<bg#e
 
-		>
-		l1
-		ag#f#edc#<b>e
-		ag#f#edc#<f f2g2
+			>
+			l1
+			ag#f#edc#<b>e
+			ag#f#edc#<f f2g2
 
-		l8
-		[1
-			[
-				#b1 a4.a > #b2 a4. <#b1 a
-				#b1 g#4.g# > #b2 g#4. <#b1 g#
-				#b1 f#4.f# > #b2 f#4. <#b1 f#
-				#b1 e4.e > #b2 e4. <#b1 e
-				>
-				#b1 d4.d > #b2 d4. <#b1 d
-				#b1 c#4.c# > #b2 c#4. <#b1 c#
-				<
-				:
-				#b1 b4.b > #b2 b4. <#b1 b
-				#b1 e4.e > #b2 e <#b1 eee
+			l8
+			[1
+				[
+					#b1 a4.a > #b2 a4. <#b1 a
+					#b1 g#4.g# > #b2 g#4. <#b1 g#
+					#b1 f#4.f# > #b2 f#4. <#b1 f#
+					#b1 e4.e > #b2 e4. <#b1 e
+					>
+					#b1 d4.d > #b2 d4. <#b1 d
+					#b1 c#4.c# > #b2 c#4. <#b1 c#
+					<
+					:
+					#b1 b4.b > #b2 b4. <#b1 b
+					#b1 e4.e > #b2 e <#b1 eee
+				]
+				#b1 f4.f > #b2 f4. <#b1 f
+				f2g2
 			]
-			#b1 f4.f > #b2 f4. <#b1 f
-			f2g2
-		]
-		#bq100 a1 >e6d6c#6<b6
-		Sub{r2.Expression(127,0,!8.)}
-		a1
-
+			#bq100 a1 >e6d6c#6<b6
+			Sub{r2.Expression(127,0,!8.)}
+			a1
+		}
 }
 
 // SFX
-IF(SFX=1 && MA7=0) {
+IF(SFX=1 && MA7=0 && SHORT=0) {
 	TR(15)
 		#INIT
 		Sub {
@@ -1366,10 +1498,6 @@ IF(DRUM=1) {
 		// Wind
 		$D{Sub{RandR(800,1536) RandV(126,127) n(87),1^1^1^1^1^1}r}//6 
 
-		[8 r1]
-
-		r2  Expression(127) IF(MA7=1) { r2 } ELSE { Rythm{a2}} r2r8Rythm{t8m8l8}
-
 		#r01={
 			Sub{Rythm{[8 h8]}}
 			Rythm{b4.b4s4b8}
@@ -1426,57 +1554,87 @@ IF(DRUM=1) {
 			Rythm{'b8t8't8m8m8l8l8L8L8}
 		}
 
-		[
+		IF(SHORT=1) {
+			// 3
+			Sub{Rythm{C1}}
+			[3 #r11 #r12]  #r11 #r13
+			Sub{Rythm{C1}}
+			[3 #r11 #r12]  #r11 #r13
+
 			Sub{Rythm{C1}}
 			#r01 #r02 #r01 #r03
 
+			// 1
 			Sub{Rythm{c1}}
 			[3 #r01 #r02] #r01 #r03
 			Sub{Rythm{c1}}
 			[3 #r01 #r02] [3 #r04] #r05
 
+			// 2
 			Sub{Rythm{c1}}
 			[3 #r01 #r06]  [3 #r04] #r05
 			Sub{Rythm{c1}}
 			[2 #r01 #r06] #r01 #r02 #r01 #r07 #r05
+		} ELSE {
+			[8 r1]
+
+			r2  Expression(127) IF(MA7=1) { r2 } ELSE { Rythm{a2}} r2r8Rythm{t8m8l8}
+
+			[
+				// 1
+				Sub{Rythm{C1}}
+				#r01 #r02 #r01 #r03
+
+				Sub{Rythm{c1}}
+				[3 #r01 #r02] #r01 #r03
+				Sub{Rythm{c1}}
+				[3 #r01 #r02] [3 #r04] #r05
+
+				// 2
+				Sub{Rythm{c1}}
+				[3 #r01 #r06]  [3 #r04] #r05
+				Sub{Rythm{c1}}
+				[2 #r01 #r06] #r01 #r02 #r01 #r07 #r05
+
+				// 3
+				Sub{Rythm{C1}}
+				[3 #r11 #r12]  #r11 #r13
+				Sub{Rythm{C1}}
+				[3 #r11 #r12]  #r11 #r13
+			]
+
+			Sub{Rythm{c1}}
+			Sub{Rythm{[15 r2]}}
+			[3 #r11] #r12 [#r11] #r12 #r13
+			Sub{Rythm{c1^1c2c2c1c1}}
+			Sub{Rythm{[15 r2]}}
+			#r11 [6 #r12] #r14 #r12 #r15
+
+			IF(MA7=0) { Sub{Rythm{z1}} }
+			[8 r1]
+			IF(MA7=0) { Sub{Rythm{Z1}} }
+			[7 r1]
+			r2 Rythm{t8m8l8L8}
 
 			Sub{Rythm{C1}}
 			[3 #r11 #r12]  #r11 #r13
 			Sub{Rythm{C1}}
-			[3 #r11 #r12]  #r11 #r13
-		]
+			[3 #r11 #r12]  #r11 #r15
 
-		Sub{Rythm{c1}}
-		Sub{Rythm{[15 r2]}}
-		[3 #r11] #r12 [#r11] #r12 #r13
-		Sub{Rythm{c1^1c2c2c1c1}}
-		Sub{Rythm{[15 r2]}}
-		#r11 [6 #r12] #r14 #r12 #r15
-
-		IF(MA7=0) { Sub{Rythm{z1}} }
-		[8 r1]
-		IF(MA7=0) { Sub{Rythm{Z1}} }
-		[7 r1]
-		r2 Rythm{t8m8l8L8}
-
-		Sub{Rythm{C1}}
-		[3 #r11 #r12]  #r11 #r13
-		Sub{Rythm{C1}}
-		[3 #r11 #r12]  #r11 #r15
-
-	Sub {
-		Expression.onTime(60,127,!1)
-		r1
-		Expression.onTime(127,60,!1)
-	}
-	Rythm {
-		R9R10R11R12R13R14R15R16R17R18R19R20R21R22R21R20R19R18R17R16R15R14R13R12R11R10R9R87R6R5
-	}
-	r2.
-	Expression(127)
-	Sub {r2.^8 Expression.onTime(127,0,!2)}
-	Rythm {
-		m24t24m24 'b1.s1.o1.c1.C1.'
+		Sub {
+			Expression.onTime(60,127,!1)
+			r1
+			Expression.onTime(127,60,!1)
+		}
+		Rythm {
+			R9R10R11R12R13R14R15R16R17R18R19R20R21R22R21R20R19R18R17R16R15R14R13R12R11R10R9R87R6R5
+		}
+		r2.
+		Expression(127)
+		Sub {r2.^8 Expression.onTime(127,0,!2)}
+		Rythm {
+			m24t24m24 'b1.s1.o1.c1.C1.'
+		}
 	}
 }
 
