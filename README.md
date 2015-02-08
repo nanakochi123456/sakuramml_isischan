@@ -12,6 +12,7 @@ Copyright 2015 @nanakochi123456
 ■README！重要：
 http://www.daiba.cx/Diary/2015-01-31/
 http://www.daiba.cx/Diary/2015-02-01/
+http://www.daiba.cx/Diary/2015-02-08/
 
 ■ビルドには以下のものが最低限必要です。
 
@@ -40,6 +41,9 @@ http://cevio.jp/
 http://utau2008.xrea.jp/
 
 もしくは、あなたの声
+
+着メロを作成するには ATS-MA7-SMAF
+http://smaf-yamaha.com/jp/tools/atsma7s.html
 
 
 ■生成に使うと便利なツール
