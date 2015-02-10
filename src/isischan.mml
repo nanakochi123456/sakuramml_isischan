@@ -8,8 +8,13 @@
 
 Tempo 240
 
-Int TIMIDITY=0
+// 着メロにする場合 1
 Int MA7=1
+
+// 短いバージョンにする場合 1 (MA7=1 のみ)
+Int SHORT=1	
+
+Int TIMIDITY=0
 Int VOCALOID=0
 Int EGUITAR=0
 Int BGUITAR=0
@@ -23,7 +28,6 @@ Int SFX=0
 Int GAKUHU=0
 Int ALL=0
 Int NODTM=1
-Int SHORT=1
 
 IF(MA7=1) {
 	曲名{"Give Me Merorin"}
@@ -31,6 +35,10 @@ IF(MA7=1) {
 } ELSE {
 	曲名{"Give Me Merorin by ISIL48"}
 	作者{"@nanakochi123456"}
+}
+
+IF(MA7=0 && SHORT=1) {
+	Print(曲が変になってるはずなの。。ぐすぐす)
 }
 
 IF(TIMIDITY=0 || ALL=1) {
@@ -1637,5 +1645,3 @@ IF(DRUM=1) {
 		}
 	}
 }
-
-

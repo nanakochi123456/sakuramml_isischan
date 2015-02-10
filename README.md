@@ -3,6 +3,22 @@ Copyright 2015 @nanakochi123456
 ================
 ■こちらのgithubバージョンは、公開していますが、URL拡散禁止です。
 
+■バイナリ公開場所
+
+v1.2<br>
+https://soundcloud.com/nanakochi123456/isis-chan-give-me-merorin<br>
+http://www.nicovideo.jp/watch/sm25509411 （カラオケ）<br>
+http://nanakochi.info/%e3%81%9d%e3%81%ae%e4%bb%96%e3%81%ae%e7%9d%80%e3%83%a1%e3%83%ad/%e3%80%90ISIS%e3%81%a1%e3%82%83%e3%82%93%e3%80%91Give%20Me%20Merorin/ （着メロ）<br>
+http://seiga.nicovideo.jp/watch/mg117992 （楽譜）
+
+v1.1<br>
+https://www.youtube.com/watch?v=ZUrF_8fBttY<br>
+http://www.nicovideo.jp/watch/sm25500629<br>
+
+v1.0<br>
+https://www.youtube.com/watch?v=28ezdvuqzRI<br>
+http://www.nicovideo.jp/watch/sm25500629<br>
+
 ■ソース
 
 いわゆるコンピューター上の楽譜：http://oto.chu.jp/mmlbbs6/post.php?mml_id=1604
