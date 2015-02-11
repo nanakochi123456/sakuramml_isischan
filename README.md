@@ -6,7 +6,7 @@ Copyright 2015 @nanakochi123456
 ■バイナリ公開場所
 
 v1.2<br>
-https://soundcloud.com/nanakochi123456/isis-chan-give-me-merorin<br>
+https://soundcloud.com/groups/isis-chan-give-me-melorin<br>
 http://www.nicovideo.jp/watch/sm25509411 （カラオケ）<br>
 http://nanakochi.info/%e3%81%9d%e3%81%ae%e4%bb%96%e3%81%ae%e7%9d%80%e3%83%a1%e3%83%ad/%e3%80%90ISIS%e3%81%a1%e3%82%83%e3%82%93%e3%80%91Give%20Me%20Merorin/ （着メロ）<br>
 http://seiga.nicovideo.jp/watch/mg117992 （楽譜）
@@ -69,13 +69,50 @@ http://soundengine.jp/
 FLAC frontend
 http://flacfrontend.sourceforge.net/
 
+■とてもいい加減に説明する再ビルド方法
+ActivePerlをインストールする
+1config.bat の以下を、インストールしたパスに書き換える
+SET PERLHOME=c:\perl
+
+cSakuraを以下よりインストールする 
+http://oto.chu.jp/a.oto.chu.jp/download/download.htm
+（できれば、テキスト音楽サクラもDLして、インストールファイルにあるdSakura.dllを同じディレクトリにコピーする）
+
+1config.bat の以下を、インストールしたパスに書き換える
+SET CSAKURAHOME=c:\Users\ゆった\Dropbox\NeetSoundProgram\csakura
+
+TiMidiTy++とパッチセットを用意する
+1config.bat の以下を、インストールしたパスに書き換える
+
+SET TIMIDITYHOME=e:\Timidity++
+（この場合、TiMidiTy++は、e:\TiMidiTy++\TiMidiTy++ にインストールのこと）
+（パッチセットは、e:\TiMidiTy++\Patches にインストールのこと）
+
+作成用のプロジェクトディレクトリを作成する
+1config.bat の以下を、作成したパスに書き換える
+SET INPUT=e:\bgm\isischan
+
+0make.bat を実行する（かなり重くなります）
+
+VOCALOID、CeVIOについては、調教しなくても使えます。
+0make.bat 実行後に生成された isischan_vocaloid.mid を
+VOCALOID EditrorやCeVIO Creative Stduio にドラッグして、
+その後、歌詞のまとめ入力を、以下ファイルから行ってください。
+
+トラック1=IA 0kasi0-IA.txt
+トラック2=さとうささら 0kasi1-Sasara.txt
+トラック3=初音ミク 0kasi2-Miku.txt
+ 
+あとは、適当にマスタリングして下さい。
+
+
 ■利用条件
 
 masterにあるバージョンは利用禁止です。
 ブランチを作成いたしますので、そちらは利用可能です。
 
 URLは、以下等で・・
-https://github.com/nanakochi123456/sakuramml_isischan/tree/1.1
+https://github.com/nanakochi123456/sakuramml_isischan/tree/1.2
 
 ISIS撲滅、平和関係等であれば何に使用しても構いません。
 
@@ -105,12 +142,14 @@ http://www.nicovideo.jp/watch/sm25500629
 http://www.nicovideo.jp/watch/sm25456647
 
 ■素材
-https://github.com/nanakochi123456/sakuramml_isischan/tree/1.1/bin
+https://github.com/nanakochi123456/sakuramml_isischan/tree/1.2/bin
 
-bin 内に、フルバージョン、カラオケバージョンがあります。
+bin 内に、フルバージョン、カラオケバージョン、着メロバージョンがあります。
 
 bin/part 内に、マスタリング元が入っています。
 
 bin/gakuhu内に、楽譜があります。
+
+bin/ringmelody には、着メロ（着うた形式用のMP3）、及び、MA-7(128和音)があります。
 
 どれも自由に利用して頂いて構いません。
