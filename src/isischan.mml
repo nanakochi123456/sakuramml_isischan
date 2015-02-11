@@ -9,10 +9,11 @@
 Tempo 240
 
 // 着メロにする場合 1
-Int MA7=1
+Int MA7=0
+Int RING=0
 
 // 短いバージョンにする場合 1 (MA7=1 のみ)
-Int SHORT=1	
+Int SHORT=0
 
 Int TIMIDITY=0
 Int VOCALOID=0
@@ -721,7 +722,7 @@ IF(GAKUHU=1) {
 		#u43
 }
 
-IF(MA7=1) {
+IF(MA7=1 || RING=1 && VOCALOID=1) {
 	TR(11)
 		#INIT
 		o5
@@ -754,7 +755,7 @@ IF(MA7=1) {
 		q97
 		VO(SquareLead)
 		v127
-		M(60)
+		IF(RING=0) { M(60) }
 		IF(SHORT=1) {
 			#u13
 			#u11
@@ -776,7 +777,7 @@ IF(MA7=1) {
 		}
 }
 
-IF(VOCALOID=1 && MA7=0) {
+IF(VOCALOID=1 && MA7=0 && RING=0) {
 	// IA
 	TR(11)
 		#INIT
@@ -843,24 +844,6 @@ IF(VOCALOID=1 && MA7=0) {
 		#u33
 		Expression(107)
 		#u43
-
-	// がっくぽいど
-	IF(0){
-	TR(14)
-		#INIT
-		q98
-		VO(Trombone)
-		v127
-		o4
-		[14 r1]
-		[32 r1]
-		#u13
-		[32 r1]
-		#u23
-		[16 r1]
-		#u33
-		#u43
-	}
 }
 
 // サビのギター
@@ -1260,7 +1243,7 @@ IF(VOCAL=1) {
 // ベース
 
 IF(BASS=1) {
-	TR(9)
+	#BASS={
 		#b1={RandV(125,127) q95 VO(PickBass)}
 		#b2={RandV(110,120) q70 VO(SlapBass1)}
 		l8
@@ -1422,6 +1405,14 @@ IF(BASS=1) {
 			Sub{r2.Expression(127,0,!8.)}
 			a1
 		}
+	}
+	TR(9)
+		#BASS
+
+	IF(RING=1) {
+		TR(14)
+			#BASS
+	}
 }
 
 // SFX
