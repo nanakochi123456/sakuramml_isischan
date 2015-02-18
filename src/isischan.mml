@@ -1,7 +1,7 @@
 // #ISISクソコラグランプリ
 // #ISISちゃん　テーマ曲
 // ギブミーメロリン title by @minamino48
-// version 1.2
+// version 1.3
 // by @nanakochi123456
 // 参考歌詞 アイシスちゃんのテーマ @kusakaiza913
 // 動画、添削 by @isisvipper
@@ -11,6 +11,7 @@ Tempo 240
 // 着メロにする場合 1
 Int MA7=0
 Int RING=0
+Int FAMICOM=0
 
 // 短いバージョンにする場合 1 (MA7=1 のみ)
 Int SHORT=0
@@ -36,6 +37,10 @@ IF(MA7=1) {
 } ELSE {
 	曲名{"Give Me Merorin by ISIL48"}
 	作者{"@nanakochi123456"}
+}
+
+IF(FAMICOM=1) {
+	NODTM=0
 }
 
 IF(MA7=0 && SHORT=1) {
@@ -1053,7 +1058,7 @@ IF(SYNTH=1) {
 		#INIT
 		v70
 		VO(Strings1)
-		IF(TIMIDITY=1) {
+		IF(TIMIDITY=1 && NODTM=1) {
 			r-20
 		}
 		o6q100
@@ -1208,7 +1213,7 @@ IF(VOCAL=1) {
 		#INIT
 		v65
 		o5q100
-		IF(TIMIDITY=1) {
+		IF(TIMIDITY=1 && NODTM=1) {
 			r-16
 		}
 		VO(ChoirAahs)

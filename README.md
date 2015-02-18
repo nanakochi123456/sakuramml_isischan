@@ -38,6 +38,14 @@ http://sourceforge.net/projects/timidity/files/
 TiMidiTy++のパッチセット
 http://sf2.daiba.cx/data/isischan/
 
+または、ファミコン版の生成に
+
+Famicom.sf2
+http://www.k3.dion.ne.jp/~kitt/sf/lib.html
+
+MSXRYTHM.sf
+https://github.com/nanakochi123456/sf2_msx_rythm
+
 csakura（テキスト音楽さくら）
 http://oto.chu.jp/
 
@@ -142,11 +150,13 @@ http://www.nicovideo.jp/watch/sm25500629
 http://www.nicovideo.jp/watch/sm25456647
 
 ■素材
-https://github.com/nanakochi123456/sakuramml_isischan/tree/1.2/bin
+https://github.com/nanakochi123456/sakuramml_isischan/tree/1.3/bin
 
-bin 内に、フルバージョン、カラオケバージョン、着メロバージョンがあります。
+bin 内に、フルバージョン、カラオケバージョン、着メロバージョン、ファミコンバージョンがあります。
 
 bin/part 内に、マスタリング元が入っています。
+
+bin/part-famicom 内に、ファミコン版のマスタリング元が入っています。
 
 bin/gakuhu内に、楽譜があります。
 
