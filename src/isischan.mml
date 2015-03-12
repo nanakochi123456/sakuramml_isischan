@@ -1,7 +1,7 @@
 // #ISISクソコラグランプリ
 // #ISISちゃん　テーマ曲
 // ギブミーメロリン title by @minamino48
-// version 1.3
+// version 1.5
 // by @nanakochi123456
 // 参考歌詞 アイシスちゃんのテーマ @kusakaiza913
 // 動画、添削 by @isisvipper
@@ -111,6 +111,7 @@ Function MO(Int VAL, Int LEN) {
 // シンバルのロテート
 Int CYMINIT=0
 Int SNAREINIT=0
+Int HHINIT=0
 
 Function Snare() {
 	Int CC
@@ -124,6 +125,30 @@ Function Snare() {
 				CC=Snare2
 			SNAREINIT=0
 		}
+	}
+	Result=CC
+}
+Int HHVALUE=0
+Function Hihat() {
+	Int CC
+	Int HHMIN=87
+	Int HHMAX=90
+	IF(MA7=0 && TIMIDITY=1) {
+		IF(HHINIT=0) {
+			CC=50
+			HHINIT=1
+		} ELSE {
+			CC=Random(HHMIN,HHMAX)
+			IF(CC=HHVALUE) {
+				CC=Random(HHMIN,HHMAX)
+				IF(CC=HHVALUE) {
+					CC=Random(HHMIN,HHMAX)
+				}
+			}
+			HHVALUE=CC
+		}
+	} ELSE {
+		CC=ClosedHiHat
 	}
 	Result=CC
 }
@@ -217,7 +242,7 @@ Function BG(Str MML) {
 			FM=""
 		} ELSE {
 			IF(MA7=0) {
-		　　　　　　R=R+"r"+Random(120,384)
+		　　　　　　R=R+"r"+Random(120,400)
 			}
 　　　　　　　　	BUF=BUF+"Sub" + CHR(123)+R+ML+CHR(125)
 	　　　　　　ML=M
@@ -1213,10 +1238,10 @@ IF(VOCAL=1) {
 		#INIT
 		v65
 		o5q100
-		IF(TIMIDITY=1 && NODTM=1) {
+		VO(ChoirAahs)
+		IF(TIMIDITY=1) {
 			r-16
 		}
-		VO(ChoirAahs)
 		IF(SHORT=1) {
 			Expression(127)
 			#chord32
@@ -1460,47 +1485,47 @@ IF(DRUM=1) {
 		} ELSE {
 			@(1)
 		}
-		$k{Sub{RandR(800,1536) RandV(124,127) n(Sticks),16}r} //37
-		$B{Sub{RandR(800,1536) RandV(124,127) n(Kick2),16}r}//35
-		$b{Sub{RandR(800,1536) RandV(124,127) n(Kick1),16}r}//36
+		$k{Sub{RandR(192,1536) RandV(124,127) n(Sticks),16}r} //37
+		$B{Sub{RandR(192,1536) RandV(124,127) n(Kick2),16}r}//35
+		$b{Sub{RandR(192,1536) RandV(124,127) n(Kick1),16}r}//36
 		IF(MA7=1) {
-			$S{Sub{RandR(800,1536) RandV(120,127) n(31),16}r}//40
-			$s{Sub{RandR(800,1536) RandV(120,127) n(31),16}r}//38
+			$S{Sub{RandR(192,1536) RandV(120,127) n(31),16}r}//40
+			$s{Sub{RandR(192,1536) RandV(120,127) n(31),16}r}//38
 		} ELSE {
-			$S{Sub{RandR(800,1536) RandV(120,127) n(Snare2),16}r}//40
-			$s{Sub{RandR(800,1536) RandV(120,127) n(Snare1),16}r}//38
+			$S{Sub{RandR(192,1536) RandV(120,127) n(Snare2),16}r}//40
+			$s{Sub{RandR(192,1536) RandV(120,127) n(Snare1),16}r}//38
 		}
-		$L{Sub{RandR(800,1536) RandV(123,127) n(LowTom2),16}r}//41
-		$l{Sub{RandR(800,1536) RandV(123,127) n(LowTom1),16}r}//43
-		$M{Sub{RandR(800,1536) RandV(123,127) n(MidTom2),16}r}//45
-		$m{Sub{RandR(800,1536) RandV(123,127) n(MidTom1),16}r}//47
-		$T{Sub{RandR(800,1536) RandV(123,127) n(HighTom2),16}r}//48
-		$t{Sub{RandR(800,1536) RandV(123,127) n(HighTom1),16}r}//50
-		$p{Sub{RandR(800,1536) RandV(110,127) n(PedalHiHat),16}r}//44
-		$h{Sub{RandR(800,1536) RandV( 65, 80) n(ClosedHiHat),16}r}//42
-		$o{Sub{RandR(800,1536) RandV( 90,110) n(OpenHiHat),16}r}//46
-		$r{Sub{RandR(800,1536) RandV(100,110) n(RideCymbal1),16}r}//51
-		$R{Sub{RandR(800,1536) RandV(120,127) n(RideBell),16}r}//53
+		$L{Sub{RandR(192,1536) RandV(123,127) n(LowTom2),16}r}//41
+		$l{Sub{RandR(192,1536) RandV(123,127) n(LowTom1),16}r}//43
+		$M{Sub{RandR(192,1536) RandV(123,127) n(MidTom2),16}r}//45
+		$m{Sub{RandR(192,1536) RandV(123,127) n(MidTom1),16}r}//47
+		$T{Sub{RandR(192,1536) RandV(123,127) n(HighTom2),16}r}//48
+		$t{Sub{RandR(192,1536) RandV(123,127) n(HighTom1),16}r}//50
+		$p{Sub{RandR(192,1536) RandV(110,127) n(Hihat()),16}r}//44
+		$h{Sub{RandR(192,1536) RandV( 65, 80) n(Hihat()),16}r}//42
+		$o{Sub{RandR(192,1536) RandV( 90,110) n(OpenHiHat),16}r}//46
+		$r{Sub{RandR(192,1536) RandV(100,110) n(RideCymbal1),16}r}//51
+		$R{Sub{RandR(192,1536) RandV(120,127) n(RideBell),16}r}//53
 		// Ride cup
-		$i{Sub{RandR(800,1536) RandV( 85,95)  n(MuteHighConga),16}r}//62
-		$I{Sub{RandR(800,1536) RandV(120,127) n(OpenHighConga),16}r}//63
-		$C{Sub{RandR(800,1536) RandV(120,127) n(Cymbal()),16}r}//49
-		$c{Sub{RandR(800,1536) RandV(120,127) n(Splash()),16}r}//49
+		$i{Sub{RandR(192,1536) RandV( 85,95)  n(MuteHighConga),16}r}//62
+		$I{Sub{RandR(192,1536) RandV(120,127) n(OpenHighConga),16}r}//63
+		$C{Sub{RandR(192,1536) RandV(120,127) n(Cymbal()),16}r}//49
+		$c{Sub{RandR(192,1536) RandV(120,127) n(Splash()),16}r}//49
 
 		// alt cymbal
-		$y{Sub{RandR(800,1536) RandV(120,127) n(HighBongo),16}r}//60
-		$Y{Sub{RandR(800,1536) RandV(120,127) n(LowBongo),16}r}//6 
+		$y{Sub{RandR(192,1536) RandV(120,127) n(HighBongo),16}r}//60
+		$Y{Sub{RandR(192,1536) RandV(120,127) n(LowBongo),16}r}//6 
 
 		// BellTree
-		$Z{Sub{RandR(800,1536) RandV(125,127) n(BellTree),16}r}//6 
-		$z{Sub{RandR(800,1536) RandV(125,127) n(JingleBell),16}r}//6 
-		$a{Sub{RandR(800,1536) RandV(125,127) n(85),16}r}//6 
+		$Z{Sub{RandR(192,1536) RandV(125,127) n(BellTree),16}r}//6 
+		$z{Sub{RandR(192,1536) RandV(125,127) n(JingleBell),16}r}//6 
+		$a{Sub{RandR(192,1536) RandV(125,127) n(85),16}r}//6 
 
 		// water
-		$A{Sub{RandR(800,1536) RandV(126,127) n(86),1^1^1^1^1^1}r}//6 
+		$A{Sub{RandR(192,1536) RandV(126,127) n(86),1^1^1^1^1^1}r}//6 
 
 		// Wind
-		$D{Sub{RandR(800,1536) RandV(126,127) n(87),1^1^1^1^1^1}r}//6 
+		$D{Sub{RandR(192,1536) RandV(126,127) n(87),1^1^1^1^1^1}r}//6 
 
 		#r01={
 			Sub{Rythm{[8 h8]}}

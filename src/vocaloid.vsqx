@@ -330,6 +330,19 @@
 				<ope>0</ope>
 			</vVoiceParam>
 		</vVoice>
+		<vVoice>
+			<vBS>0</vBS>
+			<vPC>25</vPC>
+			<compID><![CDATA[BKBLCCM7L23RZKC8]]></compID>
+			<vVoiceName><![CDATA[MAYU]]></vVoiceName>
+			<vVoiceParam>
+				<bre>0</bre>
+				<bri>0</bri>
+				<cle>0</cle>
+				<gen>0</gen>
+				<ope>0</ope>
+			</vVoiceParam>
+		</vVoice>
 	</vVoiceTable>
 	<mixer>
 		<masterUnit>
@@ -589,7 +602,1703 @@
 				<attr id="DYN">127</attr>
 			</mCtrl>
 			<mCtrl>
+				<posTick>30155</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30275</posTick>
+				<attr id="DYN">126</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30291</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30331</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30341</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30371</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30375</posTick>
+				<attr id="DYN">121</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30385</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30395</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30401</posTick>
+				<attr id="DYN">117</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30405</posTick>
+				<attr id="DYN">116</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30411</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30421</posTick>
+				<attr id="DYN">114</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30425</posTick>
+				<attr id="DYN">113</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30431</posTick>
+				<attr id="DYN">112</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30435</posTick>
+				<attr id="DYN">110</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30441</posTick>
+				<attr id="DYN">109</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30445</posTick>
+				<attr id="DYN">107</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30455</posTick>
+				<attr id="DYN">105</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30461</posTick>
+				<attr id="DYN">104</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30465</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30471</posTick>
+				<attr id="DYN">102</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30475</posTick>
+				<attr id="DYN">101</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30485</posTick>
+				<attr id="DYN">100</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30491</posTick>
+				<attr id="DYN">99</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30495</posTick>
+				<attr id="DYN">98</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30505</posTick>
+				<attr id="DYN">97</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30511</posTick>
+				<attr id="DYN">95</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30521</posTick>
+				<attr id="DYN">93</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30525</posTick>
+				<attr id="DYN">92</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30535</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30541</posTick>
+				<attr id="DYN">90</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30545</posTick>
+				<attr id="DYN">89</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30551</posTick>
+				<attr id="DYN">88</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30555</posTick>
+				<attr id="DYN">86</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30565</posTick>
+				<attr id="DYN">84</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30575</posTick>
+				<attr id="DYN">82</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30581</posTick>
+				<attr id="DYN">81</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30591</posTick>
+				<attr id="DYN">80</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30601</posTick>
+				<attr id="DYN">78</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30615</posTick>
+				<attr id="DYN">76</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30625</posTick>
+				<attr id="DYN">75</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30635</posTick>
+				<attr id="DYN">74</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30645</posTick>
+				<attr id="DYN">73</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30661</posTick>
+				<attr id="DYN">72</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30665</posTick>
+				<attr id="DYN">71</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30675</posTick>
+				<attr id="DYN">70</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30681</posTick>
+				<attr id="DYN">69</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30701</posTick>
+				<attr id="DYN">68</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30705</posTick>
+				<attr id="DYN">67</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30715</posTick>
+				<attr id="DYN">66</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30731</posTick>
+				<attr id="DYN">65</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30765</posTick>
+				<attr id="DYN">64</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30785</posTick>
+				<attr id="DYN">63</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30791</posTick>
+				<attr id="DYN">64</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30871</posTick>
+				<attr id="DYN">63</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30875</posTick>
+				<attr id="DYN">65</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30891</posTick>
+				<attr id="DYN">67</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30895</posTick>
+				<attr id="DYN">69</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30901</posTick>
+				<attr id="DYN">73</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30905</posTick>
+				<attr id="DYN">76</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30911</posTick>
+				<attr id="DYN">77</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30915</posTick>
+				<attr id="DYN">80</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30921</posTick>
+				<attr id="DYN">83</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30925</posTick>
+				<attr id="DYN">86</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30931</posTick>
+				<attr id="DYN">87</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30935</posTick>
+				<attr id="DYN">88</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>30941</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34110</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34120</posTick>
+				<attr id="DYN">126</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34160</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34166</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34176</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34186</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34190</posTick>
+				<attr id="DYN">121</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34200</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34210</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34216</posTick>
+				<attr id="DYN">117</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34220</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34230</posTick>
+				<attr id="DYN">113</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34236</posTick>
+				<attr id="DYN">111</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34246</posTick>
+				<attr id="DYN">108</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34250</posTick>
+				<attr id="DYN">107</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34256</posTick>
+				<attr id="DYN">105</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34266</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34270</posTick>
+				<attr id="DYN">101</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34276</posTick>
+				<attr id="DYN">100</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34280</posTick>
+				<attr id="DYN">96</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34286</posTick>
+				<attr id="DYN">74</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34290</posTick>
+				<attr id="DYN">67</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34296</posTick>
+				<attr id="DYN">65</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34300</posTick>
+				<attr id="DYN">64</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34306</posTick>
+				<attr id="DYN">62</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34356</posTick>
+				<attr id="DYN">64</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34360</posTick>
+				<attr id="DYN">63</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34366</posTick>
+				<attr id="DYN">64</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34386</posTick>
+				<attr id="DYN">65</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34396</posTick>
+				<attr id="DYN">67</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34400</posTick>
+				<attr id="DYN">68</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34406</posTick>
+				<attr id="DYN">69</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34410</posTick>
+				<attr id="DYN">71</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34416</posTick>
+				<attr id="DYN">73</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34420</posTick>
+				<attr id="DYN">83</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34426</posTick>
+				<attr id="DYN">84</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34430</posTick>
+				<attr id="DYN">86</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34436</posTick>
+				<attr id="DYN">89</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34440</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34446</posTick>
+				<attr id="DYN">97</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34450</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34456</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34460</posTick>
+				<attr id="DYN">121</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34466</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34470</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34476</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>34480</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41030</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41190</posTick>
+				<attr id="DYN">126</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41200</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41236</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41240</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41250</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41270</posTick>
+				<attr id="DYN">121</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41290</posTick>
+				<attr id="DYN">120</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41306</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41316</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41326</posTick>
+				<attr id="DYN">117</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41346</posTick>
+				<attr id="DYN">116</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41366</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41380</posTick>
+				<attr id="DYN">114</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41386</posTick>
+				<attr id="DYN">113</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41410</posTick>
+				<attr id="DYN">112</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41426</posTick>
+				<attr id="DYN">111</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41430</posTick>
+				<attr id="DYN">110</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41436</posTick>
+				<attr id="DYN">109</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41456</posTick>
+				<attr id="DYN">108</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41460</posTick>
+				<attr id="DYN">107</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41476</posTick>
+				<attr id="DYN">106</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41480</posTick>
+				<attr id="DYN">105</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41496</posTick>
+				<attr id="DYN">104</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41500</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41510</posTick>
+				<attr id="DYN">102</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41516</posTick>
+				<attr id="DYN">101</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41526</posTick>
+				<attr id="DYN">100</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41540</posTick>
+				<attr id="DYN">99</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41546</posTick>
+				<attr id="DYN">98</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41560</posTick>
+				<attr id="DYN">97</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41570</posTick>
+				<attr id="DYN">96</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41586</posTick>
+				<attr id="DYN">94</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41596</posTick>
+				<attr id="DYN">93</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41606</posTick>
+				<attr id="DYN">92</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41610</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41626</posTick>
+				<attr id="DYN">90</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41630</posTick>
+				<attr id="DYN">89</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41640</posTick>
+				<attr id="DYN">88</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41650</posTick>
+				<attr id="DYN">87</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41666</posTick>
+				<attr id="DYN">86</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41680</posTick>
+				<attr id="DYN">85</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41740</posTick>
+				<attr id="DYN">86</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41750</posTick>
+				<attr id="DYN">87</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41760</posTick>
+				<attr id="DYN">88</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41776</posTick>
+				<attr id="DYN">90</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41790</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41796</posTick>
+				<attr id="DYN">92</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41806</posTick>
+				<attr id="DYN">93</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41810</posTick>
+				<attr id="DYN">94</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41820</posTick>
+				<attr id="DYN">96</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41830</posTick>
+				<attr id="DYN">97</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41836</posTick>
+				<attr id="DYN">99</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41846</posTick>
+				<attr id="DYN">100</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41850</posTick>
+				<attr id="DYN">101</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41860</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41866</posTick>
+				<attr id="DYN">104</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41870</posTick>
+				<attr id="DYN">105</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41880</posTick>
+				<attr id="DYN">107</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41890</posTick>
+				<attr id="DYN">108</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41896</posTick>
+				<attr id="DYN">109</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41910</posTick>
+				<attr id="DYN">111</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41920</posTick>
+				<attr id="DYN">112</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41926</posTick>
+				<attr id="DYN">113</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41936</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41946</posTick>
+				<attr id="DYN">117</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41966</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41970</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41976</posTick>
+				<attr id="DYN">121</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41980</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41986</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41990</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>41996</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>42000</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45645</posTick>
+				<attr id="DYN">126</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45735</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45745</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45761</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45775</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45785</posTick>
+				<attr id="DYN">121</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45805</posTick>
+				<attr id="DYN">120</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45815</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45821</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45825</posTick>
+				<attr id="DYN">117</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45835</posTick>
+				<attr id="DYN">116</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45841</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45851</posTick>
+				<attr id="DYN">114</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45855</posTick>
+				<attr id="DYN">113</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45861</posTick>
+				<attr id="DYN">112</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45865</posTick>
+				<attr id="DYN">111</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45871</posTick>
+				<attr id="DYN">110</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45875</posTick>
+				<attr id="DYN">109</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45881</posTick>
+				<attr id="DYN">108</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45885</posTick>
+				<attr id="DYN">107</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45891</posTick>
+				<attr id="DYN">105</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45895</posTick>
+				<attr id="DYN">104</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45901</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45915</posTick>
+				<attr id="DYN">101</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45925</posTick>
+				<attr id="DYN">100</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45935</posTick>
+				<attr id="DYN">98</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45941</posTick>
+				<attr id="DYN">97</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45945</posTick>
+				<attr id="DYN">95</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45955</posTick>
+				<attr id="DYN">92</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45965</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45971</posTick>
+				<attr id="DYN">89</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45981</posTick>
+				<attr id="DYN">88</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45991</posTick>
+				<attr id="DYN">87</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>45995</posTick>
+				<attr id="DYN">86</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46001</posTick>
+				<attr id="DYN">85</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46005</posTick>
+				<attr id="DYN">84</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46035</posTick>
+				<attr id="DYN">85</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46041</posTick>
+				<attr id="DYN">86</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46045</posTick>
+				<attr id="DYN">88</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46051</posTick>
+				<attr id="DYN">90</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46055</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46061</posTick>
+				<attr id="DYN">93</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46065</posTick>
+				<attr id="DYN">94</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46071</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46075</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>46081</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>56985</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57061</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57115</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57141</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57151</posTick>
+				<attr id="DYN">121</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57161</posTick>
+				<attr id="DYN">120</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57171</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57181</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57191</posTick>
+				<attr id="DYN">117</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57201</posTick>
+				<attr id="DYN">116</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57211</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57221</posTick>
+				<attr id="DYN">114</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57225</posTick>
+				<attr id="DYN">113</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57235</posTick>
+				<attr id="DYN">112</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57241</posTick>
+				<attr id="DYN">111</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57245</posTick>
+				<attr id="DYN">110</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57255</posTick>
+				<attr id="DYN">108</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57265</posTick>
+				<attr id="DYN">107</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57271</posTick>
+				<attr id="DYN">105</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57275</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57285</posTick>
+				<attr id="DYN">101</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57291</posTick>
+				<attr id="DYN">100</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57295</posTick>
+				<attr id="DYN">98</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57301</posTick>
+				<attr id="DYN">96</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57305</posTick>
+				<attr id="DYN">95</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57311</posTick>
+				<attr id="DYN">94</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57315</posTick>
+				<attr id="DYN">93</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57321</posTick>
+				<attr id="DYN">92</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57325</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57331</posTick>
+				<attr id="DYN">90</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57335</posTick>
+				<attr id="DYN">88</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57345</posTick>
+				<attr id="DYN">87</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57351</posTick>
+				<attr id="DYN">84</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57355</posTick>
+				<attr id="DYN">83</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57361</posTick>
+				<attr id="DYN">82</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57365</posTick>
+				<attr id="DYN">80</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57371</posTick>
+				<attr id="DYN">78</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57381</posTick>
+				<attr id="DYN">76</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57385</posTick>
+				<attr id="DYN">75</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57391</posTick>
+				<attr id="DYN">74</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57395</posTick>
+				<attr id="DYN">73</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57401</posTick>
+				<attr id="DYN">72</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57411</posTick>
+				<attr id="DYN">71</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57415</posTick>
+				<attr id="DYN">70</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57445</posTick>
+				<attr id="DYN">72</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57455</posTick>
+				<attr id="DYN">78</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57461</posTick>
+				<attr id="DYN">81</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57465</posTick>
+				<attr id="DYN">96</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57471</posTick>
+				<attr id="DYN">97</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57475</posTick>
+				<attr id="DYN">99</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57481</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57485</posTick>
+				<attr id="DYN">104</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57491</posTick>
+				<attr id="DYN">106</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57495</posTick>
+				<attr id="DYN">108</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57501</posTick>
+				<attr id="DYN">109</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57505</posTick>
+				<attr id="DYN">112</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57515</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57521</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57531</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57535</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57541</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>57545</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
 				<posTick>57595</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64045</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64241</posTick>
+				<attr id="DYN">126</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64251</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64281</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64305</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64321</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64341</posTick>
+				<attr id="DYN">121</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64351</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64361</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64375</posTick>
+				<attr id="DYN">117</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64381</posTick>
+				<attr id="DYN">116</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64391</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64401</posTick>
+				<attr id="DYN">114</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64405</posTick>
+				<attr id="DYN">113</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64415</posTick>
+				<attr id="DYN">112</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64425</posTick>
+				<attr id="DYN">110</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64445</posTick>
+				<attr id="DYN">109</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64451</posTick>
+				<attr id="DYN">108</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64461</posTick>
+				<attr id="DYN">107</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64471</posTick>
+				<attr id="DYN">106</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64475</posTick>
+				<attr id="DYN">105</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64481</posTick>
+				<attr id="DYN">104</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64485</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64495</posTick>
+				<attr id="DYN">102</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64501</posTick>
+				<attr id="DYN">101</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64505</posTick>
+				<attr id="DYN">100</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64511</posTick>
+				<attr id="DYN">99</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64515</posTick>
+				<attr id="DYN">98</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64525</posTick>
+				<attr id="DYN">97</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64531</posTick>
+				<attr id="DYN">96</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64541</posTick>
+				<attr id="DYN">95</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64551</posTick>
+				<attr id="DYN">94</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64561</posTick>
+				<attr id="DYN">93</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64571</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64585</posTick>
+				<attr id="DYN">90</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64621</posTick>
+				<attr id="DYN">89</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64701</posTick>
+				<attr id="DYN">90</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64721</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64731</posTick>
+				<attr id="DYN">92</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64735</posTick>
+				<attr id="DYN">93</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64751</posTick>
+				<attr id="DYN">94</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64765</posTick>
+				<attr id="DYN">95</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64775</posTick>
+				<attr id="DYN">96</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64781</posTick>
+				<attr id="DYN">97</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64791</posTick>
+				<attr id="DYN">99</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64801</posTick>
+				<attr id="DYN">100</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64811</posTick>
+				<attr id="DYN">101</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64815</posTick>
+				<attr id="DYN">102</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64825</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64831</posTick>
+				<attr id="DYN">105</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64835</posTick>
+				<attr id="DYN">106</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64841</posTick>
+				<attr id="DYN">108</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64855</posTick>
+				<attr id="DYN">111</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64861</posTick>
+				<attr id="DYN">112</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64865</posTick>
+				<attr id="DYN">113</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64875</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64881</posTick>
+				<attr id="DYN">116</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64885</posTick>
+				<attr id="DYN">117</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64891</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64895</posTick>
+				<attr id="DYN">120</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64901</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64905</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>64911</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>66875</posTick>
+				<attr id="DYN">127</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67021</posTick>
+				<attr id="DYN">126</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67071</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67155</posTick>
+				<attr id="DYN">124</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67185</posTick>
+				<attr id="DYN">123</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67191</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67241</posTick>
+				<attr id="DYN">121</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67275</posTick>
+				<attr id="DYN">120</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67295</posTick>
+				<attr id="DYN">119</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67325</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67351</posTick>
+				<attr id="DYN">117</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67361</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67385</posTick>
+				<attr id="DYN">114</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67395</posTick>
+				<attr id="DYN">113</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67415</posTick>
+				<attr id="DYN">112</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67421</posTick>
+				<attr id="DYN">111</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67431</posTick>
+				<attr id="DYN">110</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67435</posTick>
+				<attr id="DYN">109</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67445</posTick>
+				<attr id="DYN">108</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67461</posTick>
+				<attr id="DYN">107</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67465</posTick>
+				<attr id="DYN">106</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67471</posTick>
+				<attr id="DYN">105</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67485</posTick>
+				<attr id="DYN">104</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67491</posTick>
+				<attr id="DYN">103</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67501</posTick>
+				<attr id="DYN">101</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67511</posTick>
+				<attr id="DYN">100</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67521</posTick>
+				<attr id="DYN">99</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67531</posTick>
+				<attr id="DYN">98</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67535</posTick>
+				<attr id="DYN">97</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67551</posTick>
+				<attr id="DYN">96</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67561</posTick>
+				<attr id="DYN">95</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67565</posTick>
+				<attr id="DYN">94</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67585</posTick>
+				<attr id="DYN">93</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67605</posTick>
+				<attr id="DYN">92</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67611</posTick>
+				<attr id="DYN">91</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67625</posTick>
+				<attr id="DYN">90</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67655</posTick>
+				<attr id="DYN">89</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67671</posTick>
+				<attr id="DYN">88</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67675</posTick>
+				<attr id="DYN">87</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67705</posTick>
+				<attr id="DYN">86</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67721</posTick>
+				<attr id="DYN">85</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67741</posTick>
+				<attr id="DYN">84</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67755</posTick>
+				<attr id="DYN">83</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67775</posTick>
+				<attr id="DYN">82</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67785</posTick>
+				<attr id="DYN">81</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67805</posTick>
+				<attr id="DYN">80</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67825</posTick>
+				<attr id="DYN">79</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67831</posTick>
+				<attr id="DYN">78</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67851</posTick>
+				<attr id="DYN">77</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67875</posTick>
+				<attr id="DYN">76</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67891</posTick>
+				<attr id="DYN">75</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67901</posTick>
+				<attr id="DYN">74</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67931</posTick>
+				<attr id="DYN">73</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67941</posTick>
+				<attr id="DYN">72</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67991</posTick>
+				<attr id="DYN">73</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>67995</posTick>
+				<attr id="DYN">74</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>68005</posTick>
+				<attr id="DYN">75</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>68015</posTick>
+				<attr id="DYN">76</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>68021</posTick>
+				<attr id="DYN">79</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>68025</posTick>
+				<attr id="DYN">115</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>68031</posTick>
+				<attr id="DYN">118</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>68045</posTick>
+				<attr id="DYN">122</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>68051</posTick>
+				<attr id="DYN">125</attr>
+			</mCtrl>
+			<mCtrl>
+				<posTick>68055</posTick>
 				<attr id="DYN">127</attr>
 			</mCtrl>
 			<mCtrl>
@@ -2009,7 +3718,7 @@
 			</note>
 			<note>
 				<posTick>63120</posTick>
-				<durTick>1155</durTick>
+				<durTick>1680</durTick>
 				<noteNum>60</noteNum>
 				<velocity>64</velocity>
 				<lyric><![CDATA[こ]]></lyric>
@@ -2022,17 +3731,17 @@
 					<attr id="fallPort">0</attr>
 					<attr id="opening">127</attr>
 					<attr id="risePort">0</attr>
-					<attr id="vibLen">66</attr>
+					<attr id="vibLen">76</attr>
 					<attr id="vibType">2</attr>
 					<seqAttr id="vibDep">
 						<elem>
-							<posNrm>22299</posNrm>
+							<posNrm>15747</posNrm>
 							<elv>40</elv>
 						</elem>
 					</seqAttr>
 					<seqAttr id="vibRate">
 						<elem>
-							<posNrm>22299</posNrm>
+							<posNrm>15747</posNrm>
 							<elv>50</elv>
 						</elem>
 					</seqAttr>
@@ -2102,7 +3811,7 @@
 			</note>
 			<note>
 				<posTick>66960</posTick>
-				<durTick>690</durTick>
+				<durTick>1020</durTick>
 				<noteNum>59</noteNum>
 				<velocity>64</velocity>
 				<lyric><![CDATA[し]]></lyric>
@@ -2115,17 +3824,17 @@
 					<attr id="fallPort">0</attr>
 					<attr id="opening">127</attr>
 					<attr id="risePort">0</attr>
-					<attr id="vibLen">66</attr>
+					<attr id="vibLen">76</attr>
 					<attr id="vibType">2</attr>
 					<seqAttr id="vibDep">
 						<elem>
-							<posNrm>22320</posNrm>
+							<posNrm>15772</posNrm>
 							<elv>40</elv>
 						</elem>
 					</seqAttr>
 					<seqAttr id="vibRate">
 						<elem>
-							<posNrm>22320</posNrm>
+							<posNrm>15772</posNrm>
 							<elv>50</elv>
 						</elem>
 					</seqAttr>
@@ -11822,7 +13531,7 @@
 			</note>
 			<note>
 				<posTick>273840</posTick>
-				<durTick>460</durTick>
+				<durTick>240</durTick>
 				<noteNum>78</noteNum>
 				<velocity>64</velocity>
 				<lyric><![CDATA[て]]></lyric>
