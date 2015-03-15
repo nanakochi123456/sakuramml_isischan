@@ -1,4 +1,4 @@
-// #ISISクソコラグランプリ
+ // #ISISクソコラグランプリ
 // #ISISちゃん　テーマ曲
 // ギブミーメロリン title by @minamino48
 // version 1.5
@@ -1038,7 +1038,9 @@ IF(ORGAN=1) {
 			#chord21
 
 		} ELSE {
-			[14 r1]
+			[10 r1]
+			l1^1^1^1 BG(c#ea)
+
 			#chord11
 			#chord12
 
@@ -1485,6 +1487,13 @@ IF(DRUM=1) {
 		} ELSE {
 			@(1)
 		}
+		Int EXPMAX=0
+		IF(MA7=1) {
+			EXPMAX=92
+		} ELSE {
+			EXPMAX=127
+		}
+		Expression(EXPMAX)
 		$k{Sub{RandR(192,1536) RandV(124,127) n(Sticks),16}r} //37
 		$B{Sub{RandR(192,1536) RandV(124,127) n(Kick2),16}r}//35
 		$b{Sub{RandR(192,1536) RandV(124,127) n(Kick1),16}r}//36
@@ -1607,7 +1616,7 @@ IF(DRUM=1) {
 		} ELSE {
 			[8 r1]
 
-			r2  Expression(127) IF(MA7=1) { r2 } ELSE { Rythm{a2}} r2r8Rythm{t8m8l8}
+			r2  Expression(EXPMAX) IF(MA7=1) { r2 } ELSE { Rythm{a2}} r2r8Rythm{t8m8l8}
 
 			[
 				// 1
@@ -1651,16 +1660,16 @@ IF(DRUM=1) {
 			[3 #r11 #r12]  #r11 #r15
 
 		Sub {
-			Expression.onTime(60,127,!1)
+			Expression.onTime(60,EXPMAX,!1)
 			r1
-			Expression.onTime(127,60,!1)
+			Expression.onTime(EXPMAX,60,!1)
 		}
 		Rythm {
 			R9R10R11R12R13R14R15R16R17R18R19R20R21R22R21R20R19R18R17R16R15R14R13R12R11R10R9R87R6R5
 		}
 		r2.
-		Expression(127)
-		Sub {r2.^8 Expression.onTime(127,0,!2)}
+		Expression(EXPMAX)
+		Sub {r2.^8 Expression.onTime(EXPMAX,0,!2)}
 		Rythm {
 			m24t24m24 'b1.s1.o1.c1.C1.'
 		}
