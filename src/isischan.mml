@@ -6,12 +6,21 @@
 // 参考歌詞 アイシスちゃんのテーマ @kusakaiza913
 // 動画、添削 by @isisvipper
 
+// 参考音源
+// TiMidiTy++ - http://timidity.sourceforge.net/ http://sf2.daiba.cx/isischan
+// MA-7 - ATS-MA7-SMAF http://smaf-yamaha.com/jp/tools/atsma7s.html
+// ファミコン風 http://www.k3.dion.ne.jp/~kitt/sf/lib.html
+// DX-7 https://github.com/asb2m10/dexed
+// RX-5 https://github.com/nanakochi123456/sf2_yamaha_rx5
+// テキスト音楽サクラ http://oto.chu.jp/mmlbbs6/post.php?mml_id=1604 http://oto.chu.jp/mmlbbs6/post.php?mml_id=1620
+// いろいろなソース https://github.com/nanakochi123456/sakuramml_isischan
+
 Tempo 240
 
 // 着メロにする場合 1
 Int MA7=0
 Int RING=0
-Int FAMICOM=0
+Int FAMICOM=1
 
 // 短いバージョンにする場合 1 (MA7=1 のみ)
 Int SHORT=0
