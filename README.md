@@ -5,6 +5,15 @@ Copyright 2015 @nanakochi123456
 
 ■バイナリ公開場所
 
+v1.5
+https://soundcloud.com/groups/isis-chan-give-me-melorin<br>
+https://www.youtube.com/watch?v=B3xznT9c_60<br>
+http://www.nicovideo.jp/watch/sm25800907<br>
+https://www.youtube.com/watch?v=wJ0SnNVOhak<br>
+http://www.nicovideo.jp/watch/sm25800891<br>
+https://www.youtube.com/watch?v=SXyglN6Ws_E<br>
+http://www.nicovideo.jp/watch/sm25800872<br>
+
 v1.2<br>
 https://soundcloud.com/groups/isis-chan-give-me-melorin<br>
 http://www.nicovideo.jp/watch/sm25509411 （カラオケ）<br>
@@ -21,9 +30,12 @@ http://www.nicovideo.jp/watch/sm25500629<br>
 
 ■ソース
 
-いわゆるコンピューター上の楽譜：http://oto.chu.jp/mmlbbs6/post.php?mml_id=1604
+いわゆるコンピューター上の楽譜<br>
+http://oto.chu.jp/mmlbbs6/post.php?mml_id=1604
+http://oto.chu.jp/mmlbbs6/post.php?mml_id=1620
 
-歌詞（英語なし）：http://uta.pw/sakusibbs/post.php?mml_id=147
+歌詞（英語なし）<br>
+http://uta.pw/sakusibbs/post.php?mml_id=147
 
 ■README！重要：
 http://www.daiba.cx/Diary/2015-01-31/
@@ -43,7 +55,7 @@ http://sf2.daiba.cx/data/isischan/
 Famicom.sf2
 http://www.k3.dion.ne.jp/~kitt/sf/lib.html
 
-MSXRYTHM.sf
+MSXRYTHM.sf2
 https://github.com/nanakochi123456/sf2_msx_rythm
 
 csakura（テキスト音楽さくら）
@@ -68,7 +80,6 @@ http://utau2008.xrea.jp/
 
 着メロを作成するには ATS-MA7-SMAF
 http://smaf-yamaha.com/jp/tools/atsma7s.html
-
 
 ■生成に使うと便利なツール
 SoundEngine FREE / RadioLine FREE
@@ -138,7 +149,7 @@ ISIS関係であれば、必ず「ISISちゃん」をタイトルに含めてく
 
 利用に関しての承諾は不要ですが、できれば売ったり、演奏する場合や、メディア取材等は、@nanakochi123456 まで一声かけてなの。
 
-（アフィリエイト広告の収入は、売ったとみなさず、無償公開したものとします）
+（個人利用でのアフィリエイト広告の収入は、売ったとみなさず、無償公開したものとします）
 
 ■ニコニコ動画のコンテンツツリーにつきまして。。
 
