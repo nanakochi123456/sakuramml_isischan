@@ -1,7 +1,7 @@
- // #ISISクソコラグランプリ
+// #ISISクソコラグランプリ
 // #ISISちゃん　テーマ曲
 // ギブミーメロリン title by @minamino48
-// version 1.5
+// version 1.6
 // by @nanakochi123456
 // 参考歌詞 アイシスちゃんのテーマ @kusakaiza913
 // 動画、添削 by @isisvipper
@@ -20,7 +20,7 @@ Tempo 240
 // 着メロにする場合 1
 Int MA7=0
 Int RING=0
-Int FAMICOM=1
+Int FAMICOM=0
 
 // 短いバージョンにする場合 1 (MA7=1 のみ)
 Int SHORT=0
