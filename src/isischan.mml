@@ -1271,7 +1271,7 @@ IF(VOCAL=1) {
 				#chord32
 				:
 				Sub{r1r1Expression.onTime(127,40,!1^2.)}
-				l1^1^1^2. BG(ea>c#) r4
+				l1^1^1^2. BG(ea>c#) r4<
 			]
 			Expression(127)
 			#chord52
