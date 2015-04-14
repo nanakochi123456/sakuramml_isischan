@@ -1,0 +1,80 @@
+[Mastering]
+Label=ISISCHANCD201504
+FileSystem=17
+Album=											
+
+[Data]
+1	\	gakuhu		20150318110821	0
+1	\	image		20150411121032	0
+1	\	kasi		20150411134343	0
+1	\	movie		20150411131757	0
+0	\	README.html	F:\makecd\isischan_cd\data\README.html	20150411134625	0
+1	\	smaf		20150218105811	0
+1	\	src		20150410181227	0
+0	\gakuhu\	isischan_gakuhu-1.jpg	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu-1.jpg	20150318110742	0
+0	\gakuhu\	isischan_gakuhu-1.png	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu-1.png	20150318110537	0
+0	\gakuhu\	isischan_gakuhu-2.jpg	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu-2.jpg	20150318110749	0
+0	\gakuhu\	isischan_gakuhu-2.png	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu-2.png	20150318110545	0
+0	\gakuhu\	isischan_gakuhu-3.jpg	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu-3.jpg	20150318110753	0
+0	\gakuhu\	isischan_gakuhu-3.png	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu-3.png	20150318110552	0
+0	\gakuhu\	isischan_gakuhu-4.jpg	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu-4.jpg	20150318110758	0
+0	\gakuhu\	isischan_gakuhu-4.png	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu-4.png	20150318110556	0
+0	\gakuhu\	isischan_gakuhu.pdf	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu.pdf	20150212114923	0
+0	\gakuhu\	isischan_gakuhu.ps	F:\makecd\isischan_cd\data\gakuhu\isischan_gakuhu.ps	20150212114923	0
+0	\kasi\	Give_Me_Merorin.html	F:\makecd\isischan_cd\data\kasi\Give_Me_Merorin.html	20150411134343	0
+0	\movie\	isischan.mp4	F:\makecd\isischan_cd\data\movie\isischan.mp4	20150411131552	0
+0	\movie\	isischan_guitar.mp4	F:\makecd\isischan_cd\data\movie\isischan_guitar.mp4	20150411131028	0
+0	\movie\	isischan_uramanira.mp4	F:\makecd\isischan_cd\data\movie\isischan_uramanira.mp4	20150411131313	0
+0	\smaf\	isischan.mmf	F:\makecd\isischan_cd\data\smaf\isischan.mmf	20150207160631	0
+0	\smaf\	isischan_short.mmf	F:\makecd\isischan_cd\data\smaf\isischan_short.mmf	20150208152500	0
+1	\src\	isischan		20150411093221	0
+1	\src\	isischan2		20150411093208	0
+0	\src\isischan\	0kasi0-IA.txt	F:\makecd\isischan_cd\data\src\isischan\0kasi0-IA.txt	20150212114928	0
+0	\src\isischan\	0kasi1-Sasara.txt	F:\makecd\isischan_cd\data\src\isischan\0kasi1-Sasara.txt	20150408001509	0
+0	\src\isischan\	0kasi2-Miku.txt	F:\makecd\isischan_cd\data\src\isischan\0kasi2-Miku.txt	20150212114928	0
+0	\src\isischan\	0make.bat	F:\makecd\isischan_cd\data\src\isischan\0make.bat	20150225103044	0
+0	\src\isischan\	1config.bat	F:\makecd\isischan_cd\data\src\isischan\1config.bat	20150313071527	0
+0	\src\isischan\	cevio.ccs	F:\makecd\isischan_cd\data\src\isischan\cevio.ccs	20150408181811	0
+0	\src\isischan\	chokyo.txt	F:\makecd\isischan_cd\data\src\isischan\chokyo.txt	20150212114928	0
+0	\src\isischan\	isischan-famicom.cfg	F:\makecd\isischan_cd\data\src\isischan\isischan-famicom.cfg	20150219054002	0
+0	\src\isischan\	isischan-org.cfg	F:\makecd\isischan_cd\data\src\isischan\isischan-org.cfg	20150313073040	0
+0	\src\isischan\	isischan-rx5.cfg	F:\makecd\isischan_cd\data\src\isischan\isischan-rx5.cfg	20150313142007	0
+0	\src\isischan\	isischan.cfg	F:\makecd\isischan_cd\data\src\isischan\isischan.cfg	20150313073040	0
+0	\src\isischan\	isischan.mml	F:\makecd\isischan_cd\data\src\isischan\isischan.mml	20150410172422	0
+0	\src\isischan\	isischan.vm7	F:\makecd\isischan_cd\data\src\isischan\isischan.vm7	20150212114928	0
+0	\src\isischan\	isischan_all.mid	F:\makecd\isischan_cd\data\src\isischan\isischan_all.mid	20150411075936	0
+0	\src\isischan\	isischan_gakuhu.mscz	F:\makecd\isischan_cd\data\src\isischan\isischan_gakuhu.mscz	20150212114928	0
+0	\src\isischan\	kasi.txt	F:\makecd\isischan_cd\data\src\isischan\kasi.txt	20150402102624	0
+0	\src\isischan\	mmlreplace.pl	F:\makecd\isischan_cd\data\src\isischan\mmlreplace.pl	20150212114928	0
+0	\src\isischan\	project.bat	F:\makecd\isischan_cd\data\src\isischan\project.bat	20150313042647	0
+0	\src\isischan\	README.txt	F:\makecd\isischan_cd\data\src\isischan\README.txt	20150411093220	0
+0	\src\isischan\	vocaloid.vsqx	F:\makecd\isischan_cd\data\src\isischan\vocaloid.vsqx	20150313051425	0
+0	\src\isischan2\	0kasi0-GAKU.txt	F:\makecd\isischan_cd\data\src\isischan2\0kasi0-GAKU.txt	20150407094332	0
+0	\src\isischan2\	0make.bat	F:\makecd\isischan_cd\data\src\isischan2\0make.bat	20150225103044	0
+0	\src\isischan2\	1config.bat	F:\makecd\isischan_cd\data\src\isischan2\1config.bat	20150407065916	0
+0	\src\isischan2\	chokyo.txt	F:\makecd\isischan_cd\data\src\isischan2\chokyo.txt	20150407082832	0
+0	\src\isischan2\	isischan2.cfg	F:\makecd\isischan_cd\data\src\isischan2\isischan2.cfg	20150407081947	0
+0	\src\isischan2\	isischan2.mml	F:\makecd\isischan_cd\data\src\isischan2\isischan2.mml	20150410162422	0
+0	\src\isischan2\	isischan2_all.mid	F:\makecd\isischan_cd\data\src\isischan2\isischan2_all.mid	20150411132616	0
+0	\src\isischan2\	isischan2_vocaloid.vsqx	F:\makecd\isischan_cd\data\src\isischan2\isischan2_vocaloid.vsqx	20150407095906	0
+0	\src\isischan2\	kasi.txt	F:\makecd\isischan_cd\data\src\isischan2\kasi.txt	20150402102624	0
+0	\src\isischan2\	mmlreplace.pl	F:\makecd\isischan_cd\data\src\isischan2\mmlreplace.pl	20141212062419	0
+0	\src\isischan2\	project.bat	F:\makecd\isischan_cd\data\src\isischan2\project.bat	20150407092613	0
+0	\src\isischan2\	README.txt	F:\makecd\isischan_cd\data\src\isischan2\README.txt	20150411093208	0
+
+[Audio]
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\01_isischan_16441.wav	Give Me Merorin	Hatsune Miku + Sato Sasara + IA	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚	‰‰¹ƒ~ƒN{‚³‚Æ‚¤‚³‚³‚ç{‚h‚`	‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\02_isischan-uramanira-16411.wav		@uramanira + Hatsune Miku + Sato Sasara + IA	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚	— ‚Ü‚É‚ç{‰‰¹ƒ~ƒN{‚³‚Æ‚¤‚³‚³‚ç{‚h‚`	‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\03_isischan_famicom_16441.wav		Hatsune Miku + Sato Sasara + IA	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚	‰‰¹ƒ~ƒN{‚³‚Æ‚¤‚³‚³‚ç{‚h‚`	‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\04_isischan-uramanira-famicom-16411.wav		@uramanira + Hatsune Miku + Sato Sasara + IA	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚	— ‚Ü‚É‚ç{‰‰¹ƒ~ƒN{‚³‚Æ‚¤‚³‚³‚ç{‚h‚`	‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\05_isischan_dxrx_16441.wav		Hatsune Miku + Sato Sasara + IA	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚	‰‰¹ƒ~ƒN{‚³‚Æ‚¤‚³‚³‚ç{‚h‚`	‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\06_isischan-uramanira-dxrx-16441.wav		@uramanira + Hatsune Miku + Sato Sasara + IA	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚	— ‚Ü‚É‚ç{‰‰¹ƒ~ƒN{‚³‚Æ‚¤‚³‚³‚ç{‚h‚`	‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\07_isischan_ma7_16441.wav		Hatsune Miku + Sato Sasara + IA	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚	‰‰¹ƒ~ƒN{‚³‚Æ‚¤‚³‚³‚ç{‚h‚`	‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\08_isischan-uramanira-ma7-16441.wav		@uramanira + Hatsune Miku + Sato Sasara + IA	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚	— ‚Ü‚É‚ç{‰‰¹ƒ~ƒN{‚³‚Æ‚¤‚³‚³‚ç{‚h‚`	‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\09_isischan-guitar_16441.wav		Gakuppoido	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚	‚ª‚­‚Á‚Û‚¢‚Ç	‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\10_isischan_karaoke_16441.wav		Karaoke	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚		‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\11_isischan_famicom_karaoke_16441.wav		Karaoke	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚		‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\12_isischan_dxrx_karaoke_16441.wav		Karaoke	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚		‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\13_isischan_ma7_karaoke_16441.wav		Karaoke	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚		‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\14_isischan-guitar_karaoke_16441.wav		Karaoke	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚		‚È‚Ì{vippers	‚È‚Ì		
+150	0	0	F:\makecd\isischan_cd\audio\cleaned\15_isischan_ma7_sample.wav		Karaoke	NANO+Vippers	NANO			‚f‚‰‚–‚…@‚l‚…@‚l‚…‚’‚‚’‚‰‚		‚È‚Ì{vippers	‚È‚Ì		
